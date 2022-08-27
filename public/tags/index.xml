@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tags on Book Club</title>
+    <link>http://example.org/tags/</link>
+    <description>Recent content in Tags on Book Club</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 26 Aug 2022 20:12:11 -0400</lastBuildDate><atom:link href="http://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI</title>
+      <link>http://example.org/tags/ai/</link>
+      <pubDate>Fri, 26 Aug 2022 20:12:11 -0400</pubDate>
+      
+      <guid>http://example.org/tags/ai/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>deep learning</title>
+      <link>http://example.org/tags/deep-learning/</link>
+      <pubDate>Fri, 26 Aug 2022 20:12:11 -0400</pubDate>
+      
+      <guid>http://example.org/tags/deep-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>machine learning</title>
+      <link>http://example.org/tags/machine-learning/</link>
+      <pubDate>Fri, 26 Aug 2022 20:12:11 -0400</pubDate>
+      
+      <guid>http://example.org/tags/machine-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>business</title>
+      <link>http://example.org/tags/business/</link>
+      <pubDate>Fri, 26 Aug 2022 20:03:54 -0400</pubDate>
+      
+      <guid>http://example.org/tags/business/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cover letters</title>
+      <link>http://example.org/tags/cover-letters/</link>
+      <pubDate>Fri, 26 Aug 2022 20:03:54 -0400</pubDate>
+      
+      <guid>http://example.org/tags/cover-letters/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>investments</title>
+      <link>http://example.org/tags/investments/</link>
+      <pubDate>Fri, 26 Aug 2022 20:03:54 -0400</pubDate>
+      
+      <guid>http://example.org/tags/investments/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SEO</title>
+      <link>http://example.org/tags/seo/</link>
+      <pubDate>Fri, 26 Aug 2022 20:03:54 -0400</pubDate>
+      
+      <guid>http://example.org/tags/seo/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

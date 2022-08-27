@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Predicting Stocks using a RNN: Part 1 | Book Club</title>
+<meta name="keywords" content="">
+<meta name="description" content="In this post, I will demonstrate mostly my skills in using the markdown langauge. I will basically try to copy Lil&rsquo;Log&rsquo;s post, and practice with various useful formatting methods like headers, quotes, questions, lists, and the like. I hope you all enjoy!
+Overview of Existing Material There are many tutorials online. I particularly like using https://dillinger.io. It&rsquo;s an online editor, and a nice intro to what I can use. Now I will work on creating a list below.">
+<meta name="author" content="">
+<link rel="canonical" href="http://example.org/posts/third/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.bc1149f4a72aa4858d3a9f71462f75e5884ffe8073ea9d6d5761d5663d651e20.css" integrity="sha256-vBFJ9KcqpIWNOp9xRi915YhP/oBz6p1tV2HVZj1lHiA=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="http://example.org/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://example.org/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://example.org/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://example.org/apple-touch-icon.png">
+<link rel="mask-icon" href="http://example.org/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="Predicting Stocks using a RNN: Part 1" />
+<meta property="og:description" content="In this post, I will demonstrate mostly my skills in using the markdown langauge. I will basically try to copy Lil&rsquo;Log&rsquo;s post, and practice with various useful formatting methods like headers, quotes, questions, lists, and the like. I hope you all enjoy!
+Overview of Existing Material There are many tutorials online. I particularly like using https://dillinger.io. It&rsquo;s an online editor, and a nice intro to what I can use. Now I will work on creating a list below." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/posts/third/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-08-27T15:18:24-04:00" />
+<meta property="article:modified_time" content="2022-08-27T15:18:24-04:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Predicting Stocks using a RNN: Part 1"/>
+<meta name="twitter:description" content="In this post, I will demonstrate mostly my skills in using the markdown langauge. I will basically try to copy Lil&rsquo;Log&rsquo;s post, and practice with various useful formatting methods like headers, quotes, questions, lists, and the like. I hope you all enjoy!
+Overview of Existing Material There are many tutorials online. I particularly like using https://dillinger.io. It&rsquo;s an online editor, and a nice intro to what I can use. Now I will work on creating a list below."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "http://example.org/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Predicting Stocks using a RNN: Part 1",
+      "item": "http://example.org/posts/third/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Predicting Stocks using a RNN: Part 1",
+  "name": "Predicting Stocks using a RNN: Part 1",
+  "description": "In this post, I will demonstrate mostly my skills in using the markdown langauge. I will basically try to copy Lil\u0026rsquo;Log\u0026rsquo;s post, and practice with various useful formatting methods like headers, quotes, questions, lists, and the like. I hope you all enjoy!\nOverview of Existing Material There are many tutorials online. I particularly like using https://dillinger.io. It\u0026rsquo;s an online editor, and a nice intro to what I can use. Now I will work on creating a list below.",
+  "keywords": [
+    
+  ],
+  "articleBody": "In this post, I will demonstrate mostly my skills in using the markdown langauge. I will basically try to copy Lil’Log’s post, and practice with various useful formatting methods like headers, quotes, questions, lists, and the like. I hope you all enjoy!\nOverview of Existing Material There are many tutorials online. I particularly like using https://dillinger.io. It’s an online editor, and a nice intro to what I can use. Now I will work on creating a list below.\nA Review of citation-method These first three links are embedded using a citation-like method\nMonik Gruber writes on the his blog, RNNS are pretty cool Andrew Trask has a site where he describes a basic RNN using python code And of course, who could forget Lilian Weng’s awesome site that inspired me to do the same A review of direct method Now the next three likes will use embedded links, but without the citation method (directly attatched)\nhere is a wiki page about Nikola Tesla There’s a site that describes how to use links with markup Finally, a link to the famous book by Pieter Levels; it’s worth a read Let’s see how these two methods compare!\nVerdict: Review of embedded link methods It definately seems much clearner to have the links separated, rather than right with the text. Just my personal preference, but I think I will go with the citation method\n",
+  "wordCount" : "231",
+  "inLanguage": "en",
+  "datePublished": "2022-08-27T15:18:24-04:00",
+  "dateModified": "2022-08-27T15:18:24-04:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://example.org/posts/third/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Book Club",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://example.org/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://example.org/" accesskey="h" title="Book Club (Alt + H)">Book Club</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://example.org/posts/" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://example.org/archives/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://example.org/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://example.org/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      Predicting Stocks using a RNN: Part 1
+    </h1>
+    <div class="post-meta"><span title='2022-08-27 15:18:24 -0400 EDT'>August 27, 2022</span>
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#overview-of-existing-material" aria-label="Overview of Existing Material">Overview of Existing Material</a><ul>
+                        
+                <li>
+                    <a href="#a-review-of-citation-method" aria-label="A Review of citation-method">A Review of citation-method</a></li>
+                <li>
+                    <a href="#a-review-of-direct-method" aria-label="A review of direct method">A review of direct method</a></li></ul>
+                </li>
+                <li>
+                    <a href="#verdict-review-of-embedded-link-methods" aria-label="Verdict: Review of embedded link methods">Verdict: Review of embedded link methods</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><p>In this post, I will demonstrate mostly my skills in using the markdown langauge. I will basically try to copy Lil&rsquo;Log&rsquo;s post, and practice with various useful formatting methods like headers, quotes, questions, lists, and the like. I hope you all enjoy!</p>
+<h2 id="overview-of-existing-material">Overview of Existing Material<a hidden class="anchor" aria-hidden="true" href="#overview-of-existing-material">#</a></h2>
+<p>There are many tutorials online. I particularly like using <a href="https://dillinger.io">https://dillinger.io</a>. It&rsquo;s an online editor, and a nice intro to what I can use. Now I will work on creating a list below.</p>
+<h3 id="a-review-of-citation-method">A Review of citation-method<a hidden class="anchor" aria-hidden="true" href="#a-review-of-citation-method">#</a></h3>
+<p>These first three links are embedded using a citation-like method</p>
+<ul>
+<li><a href="https://monik.in/?s=">Monik Gruber</a> writes on the <a href="https://monik.in/?s=">his blog</a>, RNNS are pretty cool</li>
+<li><a href="https://twitter.com/iamtrask">Andrew Trask</a> <a href="https://iamtrask.github.io/2015/11/15/anyone-can-code-lstm/">has a site</a> where he describes a basic RNN using python code</li>
+<li>And of course, who could forget Lilian Weng&rsquo;s <a href="https://lilianweng.github.io/posts/2017-07-08-stock-rnn-part-1/#the-goal">awesome site</a> that inspired me to do the same</li>
+</ul>
+<h3 id="a-review-of-direct-method">A review of direct method<a hidden class="anchor" aria-hidden="true" href="#a-review-of-direct-method">#</a></h3>
+<p>Now the next three likes will use embedded links, but without the citation method (directly attatched)</p>
+<ul>
+<li>here is <a href="https://en.wikipedia.org/wiki/Nikola_Tesla">a wiki page</a> about Nikola Tesla</li>
+<li>There&rsquo;s <a href="https://anvilproject.org/guides/content/creating-links">a site</a> that describes how to use links with markup</li>
+<li>Finally, a link to <a href="https://readmake.com">the famous book</a> by Pieter Levels; it&rsquo;s worth a read</li>
+</ul>
+<p>Let&rsquo;s see how these two methods compare!</p>
+<h2 id="verdict-review-of-embedded-link-methods">Verdict: Review of embedded link methods<a hidden class="anchor" aria-hidden="true" href="#verdict-review-of-embedded-link-methods">#</a></h2>
+<p>It definately seems much clearner to have the links separated, rather than right with the text. Just my personal preference, but I think I will go with the citation method</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2022 <a href="http://example.org/">Book Club</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

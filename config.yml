@@ -1,0 +1,52 @@
+baseURL: http://example.org/
+languageCode: en-us
+title: Book Club
+theme: hugo-PaperMod
+
+params:
+  homeInfoParams:
+    Title: "Welcome to the Book Club"
+    Content: This will be the first of many sites where I will practice blogging. Thanks for stopping by!
+
+  cover:
+    linkFullImages: true
+  
+  showReadingTime: true
+
+  showShareButtons: true
+
+
+outputs:
+    home:
+        - HTML
+        - RSS
+        - JSON # is necessary
+
+params:
+    fuseOpts:
+        isCaseSensitive: false
+        shouldSort: true
+        location: 0
+        distance: 1000
+        threshold: 0.4
+        minMatchCharLength: 0
+        keys: ["title", "permalink", "summary", "content"]
+
+menu:
+  main:
+    - identifier: posts
+      name: Posts
+      url: /posts/
+      weight: 10
+    - identifier: archives
+      name: Archives
+      url: /archives/
+      weight: 20
+    - identifier: search
+      name: Search
+      url: /search/
+      weight: 30
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 40
