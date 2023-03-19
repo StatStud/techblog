@@ -6,7 +6,7 @@ cover:
     image: math.jpeg
     alt: "here is my first picture. Cira 2022"
     caption: "here is what the caption looks like"
-tags: ["business","SEO", "investments", "cover letters"]
+tags: ["draft"]
 ---
 
 yeeh yeet. Here we go!

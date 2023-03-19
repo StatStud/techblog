@@ -3,6 +3,7 @@ title: "Predicting Stocks using a RNN: Part 1"
 date: 2022-08-27T15:18:24-04:00
 draft: false
 ShowToc: true
+tags: ['draft']
 ---
 
 In this post, I will demonstrate mostly my skills in using the markdown langauge. I will basically try to copy Lil'Log's post, and practice with various useful formatting methods like headers, quotes, questions, lists, and the like. I hope you all enjoy!
@@ -10,7 +11,7 @@ In this post, I will demonstrate mostly my skills in using the markdown langauge
 ## Overview of Existing Material
 There are many tutorials online. I particularly like using https://dillinger.io. It's an online editor, and a nice intro to what I can use. Now I will work on creating a list below.
 
-### A Review of citation-method
+### A Review of citation-method (using links)
 
 These first three links are embedded using a citation-like method
 - [Monik Gruber][monik] writes on the [his blog][monik], RNNS are pretty cool

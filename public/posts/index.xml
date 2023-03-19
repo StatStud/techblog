@@ -1,38 +1,47 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Book Club</title>
-    <link>https://example.com/posts/</link>
+    <link>https://luminous-daifuku-142c42.netlify.app/posts/</link>
     <description>Recent content in Posts on Book Club</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 27 Aug 2022 15:18:24 -0400</lastBuildDate><atom:link href="https://example.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 19 Mar 2023 14:39:33 -0400</lastBuildDate><atom:link href="https://luminous-daifuku-142c42.netlify.app/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fourth</title>
+      <link>https://luminous-daifuku-142c42.netlify.app/posts/fourth/</link>
+      <pubDate>Sun, 19 Mar 2023 14:39:33 -0400</pubDate>
+      
+      <guid>https://luminous-daifuku-142c42.netlify.app/posts/fourth/</guid>
+      <description>Introduciton After much time has passed, let&amp;rsquo;s see if I can (1) download this repo (2) create a new file (3) edit the previous files (4) push changes to repo (5) have website update</description>
+    </item>
+    
     <item>
       <title>Predicting Stocks using a RNN: Part 1</title>
-      <link>https://example.com/posts/third/</link>
+      <link>https://luminous-daifuku-142c42.netlify.app/posts/third/</link>
       <pubDate>Sat, 27 Aug 2022 15:18:24 -0400</pubDate>
       
-      <guid>https://example.com/posts/third/</guid>
+      <guid>https://luminous-daifuku-142c42.netlify.app/posts/third/</guid>
       <description>In this post, I will demonstrate mostly my skills in using the markdown langauge. I will basically try to copy Lil&amp;rsquo;Log&amp;rsquo;s post, and practice with various useful formatting methods like headers, quotes, questions, lists, and the like. I hope you all enjoy!
 Overview of Existing Material There are many tutorials online. I particularly like using https://dillinger.io. It&amp;rsquo;s an online editor, and a nice intro to what I can use. Now I will work on creating a list below.</description>
     </item>
     
     <item>
       <title>Second</title>
-      <link>https://example.com/posts/second/</link>
+      <link>https://luminous-daifuku-142c42.netlify.app/posts/second/</link>
       <pubDate>Fri, 26 Aug 2022 20:12:11 -0400</pubDate>
       
-      <guid>https://example.com/posts/second/</guid>
+      <guid>https://luminous-daifuku-142c42.netlify.app/posts/second/</guid>
       <description>Here is to a new post. Wow, we have already done so much, it&amp;rsquo;s crazy to see how far we&amp;rsquo;ve come to this world. Welp. See you all soon! Bye bye now!
 Best, Alejandro</description>
     </item>
     
     <item>
       <title>First</title>
-      <link>https://example.com/posts/first/</link>
+      <link>https://luminous-daifuku-142c42.netlify.app/posts/first/</link>
       <pubDate>Fri, 26 Aug 2022 20:03:54 -0400</pubDate>
       
-      <guid>https://example.com/posts/first/</guid>
+      <guid>https://luminous-daifuku-142c42.netlify.app/posts/first/</guid>
       <description>yeeh yeet. Here we go!</description>
     </item>
     

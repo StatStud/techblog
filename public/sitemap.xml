@@ -2,49 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://example.com/</loc>
+    <loc>https://luminous-daifuku-142c42.netlify.app/</loc>
+    <lastmod>2023-03-19T14:39:33-04:00</lastmod>
+  </url><url>
+    <loc>https://luminous-daifuku-142c42.netlify.app/tags/draft/</loc>
+    <lastmod>2023-03-19T14:39:33-04:00</lastmod>
+  </url><url>
+    <loc>https://luminous-daifuku-142c42.netlify.app/posts/fourth/</loc>
+    <lastmod>2023-03-19T14:39:33-04:00</lastmod>
+  </url><url>
+    <loc>https://luminous-daifuku-142c42.netlify.app/posts/</loc>
+    <lastmod>2023-03-19T14:39:33-04:00</lastmod>
+  </url><url>
+    <loc>https://luminous-daifuku-142c42.netlify.app/tags/</loc>
+    <lastmod>2023-03-19T14:39:33-04:00</lastmod>
+  </url><url>
+    <loc>https://luminous-daifuku-142c42.netlify.app/posts/third/</loc>
     <lastmod>2022-08-27T15:18:24-04:00</lastmod>
   </url><url>
-    <loc>https://example.com/posts/</loc>
-    <lastmod>2022-08-27T15:18:24-04:00</lastmod>
-  </url><url>
-    <loc>https://example.com/posts/third/</loc>
-    <lastmod>2022-08-27T15:18:24-04:00</lastmod>
-  </url><url>
-    <loc>https://example.com/tags/ai/</loc>
+    <loc>https://luminous-daifuku-142c42.netlify.app/posts/second/</loc>
     <lastmod>2022-08-26T20:12:11-04:00</lastmod>
   </url><url>
-    <loc>https://example.com/tags/deep-learning/</loc>
-    <lastmod>2022-08-26T20:12:11-04:00</lastmod>
-  </url><url>
-    <loc>https://example.com/tags/machine-learning/</loc>
-    <lastmod>2022-08-26T20:12:11-04:00</lastmod>
-  </url><url>
-    <loc>https://example.com/posts/second/</loc>
-    <lastmod>2022-08-26T20:12:11-04:00</lastmod>
-  </url><url>
-    <loc>https://example.com/tags/</loc>
-    <lastmod>2022-08-26T20:12:11-04:00</lastmod>
-  </url><url>
-    <loc>https://example.com/tags/business/</loc>
+    <loc>https://luminous-daifuku-142c42.netlify.app/posts/first/</loc>
     <lastmod>2022-08-26T20:03:54-04:00</lastmod>
   </url><url>
-    <loc>https://example.com/tags/cover-letters/</loc>
-    <lastmod>2022-08-26T20:03:54-04:00</lastmod>
+    <loc>https://luminous-daifuku-142c42.netlify.app/archives/</loc>
   </url><url>
-    <loc>https://example.com/posts/first/</loc>
-    <lastmod>2022-08-26T20:03:54-04:00</lastmod>
+    <loc>https://luminous-daifuku-142c42.netlify.app/categories/</loc>
   </url><url>
-    <loc>https://example.com/tags/investments/</loc>
-    <lastmod>2022-08-26T20:03:54-04:00</lastmod>
-  </url><url>
-    <loc>https://example.com/tags/seo/</loc>
-    <lastmod>2022-08-26T20:03:54-04:00</lastmod>
-  </url><url>
-    <loc>https://example.com/archives/</loc>
-  </url><url>
-    <loc>https://example.com/categories/</loc>
-  </url><url>
-    <loc>https://example.com/search/</loc>
+    <loc>https://luminous-daifuku-142c42.netlify.app/search/</loc>
   </url>
 </urlset>
