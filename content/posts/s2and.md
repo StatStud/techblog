@@ -18,6 +18,7 @@ For a post demonstrating the implementation of S2AND, feel free to read [the sec
 # Introduction
 ## What problem does this algorithm solve?
 
-![Alt Text](s2and1.png "Title Text")
+![Alt Text](s2and1.png)
 
-Did the image worl?
+Did the image work?
+Can I upload changes if I do not run "hugo"?
