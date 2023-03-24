@@ -6,7 +6,17 @@
     <description>Recent content in Posts on Book Club</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 19 Mar 2023 14:39:33 -0400</lastBuildDate><atom:link href="https://luminous-daifuku-142c42.netlify.app/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 24 Mar 2023 16:52:30 -0400</lastBuildDate><atom:link href="https://luminous-daifuku-142c42.netlify.app/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>S2AND: Allen AI Paper Summary</title>
+      <link>https://luminous-daifuku-142c42.netlify.app/posts/s2and/</link>
+      <pubDate>Fri, 24 Mar 2023 16:52:30 -0400</pubDate>
+      
+      <guid>https://luminous-daifuku-142c42.netlify.app/posts/s2and/</guid>
+      <description>Introduction The purpose of this post is to provide readers a quick recap on the (S2AND paper by Allen AI)[&amp;lsquo;https://arxiv.org/pdf/2103.07534.pdf&amp;rsquo;]. Readers are encouraged to review the original paper for technical details they wish to further investigate. Additionally, Daniel King and Sergey Feldman have done a great job documenting S2AND development in a (separate Medium post)[&amp;lsquo;https://blog.allenai.org/s2and-an-improved-author-disambiguation-system-for-semantic-scholar-d09380da30e6&amp;rsquo;] by Sergey Feldman.
+For a post demonstrating the implementation of S2AND, feel free to read (the second part)[&amp;lsquo;https://google.</description>
+    </item>
+    
     <item>
       <title>Fourth</title>
       <link>https://luminous-daifuku-142c42.netlify.app/posts/fourth/</link>
