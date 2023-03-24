@@ -84,7 +84,9 @@ This is often performed heuristically, based on author names; the goal is to gro
 
 A record (AKA, a *signature*) is simply any author-paper combination.
 
-![](/s2and3.png "Simple representation of signatures (Note: all other features are excluded in this illustration)")
+!["this is a test"](/s2and3.png "Simple representation of signatures (Note: all other features are excluded in this illustration)")
+
+test 1
 
 
 
