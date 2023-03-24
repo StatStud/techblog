@@ -18,6 +18,6 @@ For a post demonstrating the implementation of S2AND, feel free to read [the sec
 # Introduction
 ## What problem does this algorithm solve?
 
-[Alt Text](/s2and1.png)
+![Alt Text](/s2and1.png)
 
-take 3
+take 4
