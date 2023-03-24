@@ -4,6 +4,10 @@ date: 2023-03-24T16:52:30-04:00
 draft: false
 tags: ['author-disambiguation']
 ShowToc: true
+cover:
+    image: s2and1.png
+    alt: "S2AND Algorithm"
+    caption: ""
 ---
 
 # Introduction
@@ -14,3 +18,6 @@ For a post demonstrating the implementation of S2AND, feel free to read [the sec
 # Introduction
 ## What problem does this algorithm solve?
 
+![Alt Text](s2and1.png "Title Text")
+
+Did the image worl?
