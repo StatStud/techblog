@@ -185,7 +185,7 @@ driver.quit()
 
 The above code block is divided into two sections: (1) defining the regex rules to parse the raw html code (2) actually running the web scraping tool, applying the regex rules, and saving the results into a csv file. Below is what the function looks like, as it opens a new browser window, loops through the list of links, and saves the output into a csv.
 
-![](/ddb6.png)
+![](/ddb6.gif)
 
 We know we web scraped correctly when we're left with a file of all the medical terms.
 
