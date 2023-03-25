@@ -51,12 +51,18 @@ On each listed page, we can also see a common pattern in the web layout: each me
 
 ## Using ChatGPT
 
-![](/ddb5.png)
+> Write a python script that uses selenium==4.8.3 and accomplishes the following items:
+> (1) go to http://www.diseasesdatabase.com
+> (2) sort through the div container with id = "page_specific_content"
+> (3) within the div="page_specific_content", loop through and visit all of the a href links inside of the table id="alphaidx" *note* there should be 26 links in total
+> (4) within each link, access the div id='page_specific_content'
+> (5) within the div id='page_specific_content', extract all the terms that are separated by the <br> tag using these 2 rules: (rule1) if the fist thing after the <br> tag is not an a tag, but rather text, then extract that text, and move onto the next <br> separated value (rule2) if the first thing after the <br> tag is an a href tag, then extract the words that are within this a tag (in between the opening and closing tags).
+> (6) Save all extracted values into a csv value, where each extracted item is it's own value.
 
 Now we're ready to create our prompt for ChatGPT. Above I've included by inital prompt to get the web scraping script. 
-```txt
+
 Notice the specific details I use in creating my prompt; I specified using Selenium, the fact that there are multiple links to visit, the name of the div id's that I'm interested in, how each line is broken, and finally, the fact that I want to save these values into a clean, organized csv file.
-```
+
 
 Despite this intentional prompt, it took many attempts to fine-tune and adjust my code. This reveals how messy it can be to get a good, fully-functional code from ChatGPT. But as long as you persist, you might end up with something like this:
 
