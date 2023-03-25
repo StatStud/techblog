@@ -54,8 +54,9 @@ On each listed page, we can also see a common pattern in the web layout: each me
 ![](/ddb5.png)
 
 Now we're ready to create our prompt for ChatGPT. Above I've included by inital prompt to get the web scraping script. 
-
+```txt
 Notice the specific details I use in creating my prompt; I specified using Selenium, the fact that there are multiple links to visit, the name of the div id's that I'm interested in, how each line is broken, and finally, the fact that I want to save these values into a clean, organized csv file.
+```
 
 Despite this intentional prompt, it took many attempts to fine-tune and adjust my code. This reveals how messy it can be to get a good, fully-functional code from ChatGPT. But as long as you persist, you might end up with something like this:
 
