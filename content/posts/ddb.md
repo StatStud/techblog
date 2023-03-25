@@ -72,6 +72,10 @@ import csv
 import time
 import re
 
+######################################################
+################ define regex rules ##################
+######################################################
+
 def extract_text_between_br_and_i_tags(html):
     # regex pattern to match text between <br> and <i> tags
     pattern = r"<br>([^<]*?)<i>|<br>([^<]*?)</a>"
@@ -83,8 +87,6 @@ def extract_text_between_br_and_i_tags(html):
     result = [x.strip() for match in matches for x in match if x.strip()]
 
     return result
-
-import re
 
 
 def extract_text_between_br_and_a_tags(html):
@@ -126,7 +128,7 @@ def extract_first_entry(html):
         return extract_text_between_br_and_i_tags(result)
     
 ######################################################
-######################################################
+################ run web scraping ####################
 ######################################################
 
 # Launch the Safari browser
@@ -180,5 +182,13 @@ with open('output.csv', mode='a', newline='') as csv_file:
 # Close the browser
 driver.quit()
 ```
+
+The above code block is divided into two sections: (1) defining the regex rules to parse the raw html code (2) actually running the web scraping tool, applying the regex rules, and saving the results into a csv file. Below is what the function looks like, as it opens a new browser window, loops through the list of links, and saves the output into a csv.
+
+![](/ddb6.png)
+
+We know we web scraped correctly when we're left with a file of all the medical terms.
+
+![](/ddb7.png)
 
 It's important to note that there is no *right* or *wrong* way to web scrape, because each static site is so different, and the way we choose to parse it can vary depending on the tools we use. However, as long as the end result is meant--extracting textual data from the web onto a clean csv file--then all the rest is just details!
