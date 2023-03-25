@@ -26,7 +26,7 @@ For more information, consider checking out [the official site](http://www.disea
 
 Unfortunately, DDB does not provide free download of the raw data nor an open API to interact with the data. It even says so on its website.
 
-![](ddb2.png)
+![](/ddb2.png)
 
 But that won't stop us in the name of data science! Web scraping allows us to interact with web pages to extact messy, textual data into clean, organized spreadsheets for our models!
 
