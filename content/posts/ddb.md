@@ -41,17 +41,17 @@ If you have no idea how to create a custom web scraping file, don't worry! You o
 
 It's important to have an idea of how the site appears from a coding standpoint, because this will help guide your prompts for ChatGPT to help.
 
-![](ddb3.png)
+![](/ddb3.png)
 
 In the above example, I notice how the home page has a table of all the alphabets, and each letter is a link to a list of all the named medical terms
 
-![](ddb4.png)
+![](/ddb4.png)
 
 On each listed page, we can also see a common pattern in the web layout: each medical term is a new line, separated by the <br> tag. Moreover, some terms have links, after the word "see", while others do not (both of these points will be important to know!).
 
 ## Using ChatGPT
 
-![](ddb5.png)
+![](/ddb5.png)
 
 Now we're ready to create our prompt for ChatGPT. Above I've included by inital prompt to get the web scraping script. 
 
