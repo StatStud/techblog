@@ -2,7 +2,7 @@
 title: "Diseases Database (DDB)"
 date: 2023-03-25T03:29:20-04:00
 draft: false
-tags: ['datasets','healthcare','webscraping']
+tags: ['datasets','healthcare','webs-craping']
 ShowToc: true
 cover:
     image: ddb1.png
