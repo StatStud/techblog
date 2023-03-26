@@ -15,11 +15,11 @@ Today we will be extracting a list of followers from social media.
 
 While we could do this with web scraping, sometimes it's simply easier to do by using tools specifically made for this. After all, web scraping is all about the output, and less on *how* you scrape.
 
-![](insta1.gif)
+![](/insta1.gif)
 
 # Extracting Followers 
 
-![](insta3.png)
+![](/insta3.png)
 
 For this demo, we will use [Donald Trump's account](https://www.instagram.com/realdonaldtrump/) to extract all of his followers into a spreadsheet. 
 
@@ -32,8 +32,8 @@ To accomplish this, we will use the [Bardeen Chrome Extension](https://chrome.go
 
 ## Using Bardeen 
 
-![](insta4.png)
-![](insta7.png)
+![](/insta4.png)
+![](/insta7.png)
 
 Once we have the extension installed, and selected the save instragram followers option, we may proceed with the scraping.
 
@@ -41,7 +41,7 @@ Make sure to have the "followers" tab open, on your browser. This will help Bard
 
 Note: This process also works for "following" tab.
 
-![](insta6.png)
+![](/insta6.png)
 
 And that's in! It's as simple as that! When the extension is finished running, you may view the spreadsheet from your google sheets, as well as all of the attributes we outlined before.
 
