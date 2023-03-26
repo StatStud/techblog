@@ -53,7 +53,7 @@ Then I found [this video](https://www.youtube.com/watch?v=9kgvVes6Ixs&t=296s), g
 
 This is not a paid sponsorship--I simply share what I find useful, practical, and free. 
 
-It seems like Bardeen also has a bunch of other use cases beyond Instragram, like (this video)[https://www.youtube.com/watch?v=9kgvVes6Ixs&t=296s] shows.
+It seems like Bardeen also has a bunch of other use cases beyond Instragram, like [this video](https://www.youtube.com/watch?v=9kgvVes6Ixs&t=296s) shows.
 
 Who knows, maybe Bardeen is simply one of many tools we have in our toolbox to collect data.
 
