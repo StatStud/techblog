@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>datasets on Book Club</title>
+    <link>https://luminous-daifuku-142c42.netlify.app/tags/datasets/</link>
+    <description>Recent content in datasets on Book Club</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 25 Mar 2023 03:29:20 -0400</lastBuildDate><atom:link href="https://luminous-daifuku-142c42.netlify.app/tags/datasets/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Diseases Database (DDB)</title>
+      <link>https://luminous-daifuku-142c42.netlify.app/posts/ddb/</link>
+      <pubDate>Sat, 25 Mar 2023 03:29:20 -0400</pubDate>
+      
+      <guid>https://luminous-daifuku-142c42.netlify.app/posts/ddb/</guid>
+      <description>Introduction One of the hardest parts of any data science project is gathering good data. Fortunately, many online data repositories exist for us to use!
+The Diseases Database (DDB) is one such source. The Diseases Database, developed and maintained by Medical Object Oriented Software Enterprises LTD, is a cross-referenced index of human disease, medications, symptoms, signs, and abnormal investigation findings, intended for medical practitioners and students.
+Rather than in hierarchies of anatomical, physiological, or pathological systems, it serves as a way of classifying medical concepts along clinical axes, such as cause/effect, risk factors, interactions, etc.</description>
+    </item>
+    
+  </channel>
+</rss>

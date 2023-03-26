@@ -2,7 +2,7 @@
 title: "Instagram Scrape"
 date: 2023-03-26T15:52:40-04:00
 draft: false
-tags: ['social-media,'web-scraping','no-code']
+tags: ['social-media','web-scraping','no-code']
 ShowToc: true
 cover:
     image: insta2.png

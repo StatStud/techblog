@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>no-code on Book Club</title>
+    <link>https://luminous-daifuku-142c42.netlify.app/tags/no-code/</link>
+    <description>Recent content in no-code on Book Club</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 26 Mar 2023 15:52:40 -0400</lastBuildDate><atom:link href="https://luminous-daifuku-142c42.netlify.app/tags/no-code/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Instagram Scrape</title>
+      <link>https://luminous-daifuku-142c42.netlify.app/posts/instagram-scrape/</link>
+      <pubDate>Sun, 26 Mar 2023 15:52:40 -0400</pubDate>
+      
+      <guid>https://luminous-daifuku-142c42.netlify.app/posts/instagram-scrape/</guid>
+      <description>Introduction Today we will be extracting a list of followers from social media.
+While we could do this with web scraping, sometimes it&amp;rsquo;s simply easier to do by using tools specifically made for this. After all, web scraping is all about the output, and less on how you scrape.
+Extracting Followers For this demo, we will use Donald Trump&amp;rsquo;s account to extract all of his followers into a spreadsheet.
+Specifically, we will be collecting the following data</description>
+    </item>
+    
+  </channel>
+</rss>
