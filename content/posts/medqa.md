@@ -58,7 +58,7 @@ Below is an example record from one of the files.
 
 ## What else do we get from the download?
 
-![](/medqa.png)
+![](/medqa1.png)
 
 The folder is divided into two sections:
 1. questions
