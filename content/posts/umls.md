@@ -30,7 +30,7 @@ The official site can be found [here](https://www.nlm.nih.gov/research/umls/inde
 
 ## What does the UMLS consist of?
 
-![](/umls.png)
+![](/umls2.png)
 
 The UMLS consists of 3 components:
 1. The Metathesaurus
