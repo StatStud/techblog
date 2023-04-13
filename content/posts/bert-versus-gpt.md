@@ -31,9 +31,21 @@ Unlike BERT, GPT is trained to predict the next word in a sequence of text. This
 
 GPT-2 and GPT-3 are the successors of the GPT model. GPT-2 was released in 2019 and is a larger and more powerful version of the original GPT model. GPT-2 has 1.5 billion parameters, which makes it one of the largest NLP models at the time of its release. GPT-3, released in 2020, is an even larger model with 175 billion parameters. GPT-3 is designed to be able to generate human-like text, and has been used for a wide range of tasks, from language translation to chatbots and content creation.
 
-GPT-J is a variant of GPT-3 created by EleutherAI, a group of independent researchers. GPT-J is similar to GPT-3, but it is a smaller model with 6 billion parameters that can be run on standard GPUs, unlike GPT-3 which requires specialized hardware. 
+GPT-J is a variant of GPT-3 created by [EleutherAI](https://en.wikipedia.org/wiki/EleutherAI), a group of independent researchers. GPT-J is similar to GPT-3, but it is a smaller model with 6 billion parameters that can be run on standard GPUs, unlike GPT-3 which requires specialized hardware. 
 
 GPT-J has been released as an [open-source model](https://huggingface.co/EleutherAI/gpt-j-6b), which means anyone can use it for free. The following repos are worth checking out:
 - [https://github.com/kingoflolz/mesh-transformer-jax](https://github.com/kingoflolz/mesh-transformer-jax)
 - [https://github.com/TheProtaganist/gpt-j](https://github.com/TheProtaganist/gpt-j)
 - [https://github.com/machaao/gpt-j-chatbot](https://github.com/machaao/gpt-j-chatbot)
+
+# Fine-tuning
+
+Fine-tuning BERT involves adding task-specific layers to the pre-trained model and training the model on a task-specific dataset. In contrast, fine-tuning GPT involves using the pre-trained model as a language model and generating text for a specific task.
+
+GPT models are better suited for tasks that require generating text, while BERT is more suitable for tasks that require understanding the meaning of text.
+
+BERT can be fine-tuned for a wide range of tasks, including both classification and sequence labeling tasks, while GPT is primarily used for language generation tasks.
+
+when fine-tuning GPT for text classification, you can give it a classifier head in the same way you do with BERT.
+
+In fact, using a classifier head is a common approach for fine-tuning GPT for classification tasks. The classifier head is typically added on top of the GPT model's output layer, which consists of a sequence of vectors that represent the probability distribution over the vocabulary of the next word in a given input sequence.
