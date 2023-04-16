@@ -69,7 +69,7 @@ For example, given the sentence,
 
 > The patient is suffering from a raging headache. He mentioned this past week that he has fever, nausea, and vomiting. He has trouble concentrating and often feels anxious.
 
-![](/entity-linking2.png)
+![](/entity-linking3.png)
 
 A biochemically pretrained NER model would work great at picking up words like "fever", "nausea", "headache", and "vomiting", but would have a harder time picking up "trouble concentrating" or "anxious"--that's exactly where SRL helps to scoop up the extract helpful and descriptive terms.
 
