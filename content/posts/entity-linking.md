@@ -22,6 +22,8 @@ The index is built using a BERT-based synonym model that generates embedding vec
 
 Our proposed approach to entity linking has significant implications in the medical space for patient care and biomedical use cases by improving the accuracy and efficiency of clinical decision support systems, as well as facilitating the extraction of valuable insights from biomedical literature.
 
+![](/entity-linking2.png)
+
 The code, data, and instructions for this algorithm can be found in [this repo](https://github.com/StatStud/nl-parsing)
 
 # Algorithm Overview
@@ -50,3 +52,28 @@ Interestingly enough, because this was a biomedical use case for entity-linking,
 That's when my mentor [Sutanay Choudhury](https://sutanay.github.io) famously told me the relation between vector similarity and synonym similarity:
 
 > "closeness in **vector space** *does not* imply *synonym* similarity"
+
+## Parsing sentences for query candidates
+
+In this step, we parse each sentence of a given paragraph/context to extract query candidates; we call them queries because they are the search inputs that we eventually feed into the FAISS similarity search. 
+
+The goal of this parsing is to extract medical terms, signs, and symptoms related to what the patient is experiencing.
+
+To achieve this goal, we use two parsing methods:
+1. Named Entity Recognition (NER)
+2. Semantic Role Labeling (SRL)
+
+We use these two methods together because NER often works well to extract commonly recognized words, while SRL works to provided an extra boost in extracting words/phrases outside of what NER can detect.
+
+For example, given the sentence, 
+
+> The patient is suffering from a raging headache. He mentioned this past week that he has fever, nausea, and vomiting. He has trouble concentrating and often feels anxious.
+
+![](/entity-linking2.png)
+
+A biochemically pretrained NER model would work great at picking up words like "fever", "nausea", "headache", and "vomiting", but would have a harder time picking up "trouble concentrating" or "anxious"--that's exactly where SRL helps to scoop up the extract helpful and descriptive terms.
+
+The specific models I've found to work well for this project are [scispaCy's en_ner_bc5cdr_md model](https://allenai.github.io/scispacy/) for NER, and Allen AI's SRL BERT model (2020.12.15) for SRL ([direct model download link here](https://storage.googleapis.com/allennlp-public-models/structured-prediction-srl-bert.2020.12.15.tar.gz))
+
+NOTE: Allen AI also has a web demo for the SRL model that anyone can try [here](https://demo.allennlp.org/semantic-role-labeling/semantic-role-labeling).
+
