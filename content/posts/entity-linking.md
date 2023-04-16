@@ -77,3 +77,5 @@ The specific models I've found to work well for this project are [scispaCy's en_
 
 NOTE: Allen AI also has a web demo for the SRL model that anyone can try [here](https://demo.allennlp.org/semantic-role-labeling/semantic-role-labeling).
 
+## Similarity Search via nearest neighbors
+
