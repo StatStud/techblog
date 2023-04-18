@@ -133,3 +133,62 @@ Here is what the signatures.json file looks like for ArnetMiner:
         }
     }
 ```
+
+And here is what clusters.json looks like:
+
+```json
+"AM_ajay gupta_1": {
+        "cluster_id": "AM_ajay gupta_1",
+        "signature_ids": [
+            "0",
+            "1",
+            "4",
+            "13",
+            "16",
+            "18",
+            "23",
+            "26"
+        ],
+        "model_version": -1
+    },
+    "AM_ajay gupta_8": {
+        "cluster_id": "AM_ajay gupta_8",
+        "signature_ids": [
+            "2",
+            "3",
+            "5",
+            "6",
+            "10",
+            "11",
+            "12",
+            "15",
+            "17",
+            "19",
+            "25",
+            "28"
+        ],
+        "model_version": -1
+    },
+    "AM_ajay gupta_7": {
+        "cluster_id": "AM_ajay gupta_7",
+        "signature_ids": [
+            "7",
+            "8",
+            "9",
+            "21",
+            "22",
+            "24",
+            "30"
+        ],
+        "model_version": -1
+    },
+    "AM_s. huang_5": {
+        "cluster_id": "AM_s. huang_5",
+        "signature_ids": [
+            "5215"
+        ],
+        "model_version": -1
+    },
+```
+
+Notice the last entry
