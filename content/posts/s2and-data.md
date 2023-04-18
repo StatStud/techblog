@@ -1,11 +1,11 @@
 ---
-title: "S2and Data"
+title: "S2AND Data"
 date: 2023-04-18T15:04:45-04:00
 draft: false
 tags: ['author-disambiguation','datasets']
 ShowToc: true
 cover:
-    image: s2and11.ong
+    image: s2and11.png
     alt: "Cover"
     caption: ""
 ---
