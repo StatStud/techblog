@@ -14,7 +14,11 @@ Sixth Edition, By Robin Nixon
 
 # Chapter 1:  Introduction to Dynamic Web Content
 
+HTTP is a *communication standard* governing the *requests* and *responses* that are sent between the browser running on the end user's computer (client) and the web server (server). 
+
 # Chapter 2: Setting Up a Development Server
+
+A developer server is simply localhost testing.
 
 # Chapter 3: Introduction to PHP
 
