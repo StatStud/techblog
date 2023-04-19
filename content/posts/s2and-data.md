@@ -9,17 +9,47 @@ cover:
     alt: "Cover"
     caption: ""
 ---
+# Introduction
 
+The purpose of this post is to evaluate the structure of the training data used in running the S2AND algorithm; understanding the file formats will help us insert our own, unique data for author disambiguation
+
+# Folder Structure
 Here is what the full data directory looks like:
 
 ![](/s2and12.png)
 
+As you can see, the S2AND repo provides five folders for five different test runs of the algorithm, namely:
+- Aminer
+- ArnetMiner
+- Inspire
+- Kisti
+- Medline
 
-Here is what the file structure looks like for one of the datasets (ArnetMiner)
+We also have access to the production-level, pretrained S2AND model that's ready for us to plug in and use:
+- production_model.pickle
+
+The path_config.json is simply a config file to tell S2AND the *absolute* path of our data folders (make sure to update this!)
+
+Frankly speaking, I'm not too sure what the following files are for, but that's okay for now, because they are not needed for this post!
+- full union seed _2.pickle
+- full union _seed_4.pickle
+- s2and_name_tuples.txt
+
+# Input Data
+Here is what the file structure looks like for one of the datasets (ArnetMiner). Note that this structure is similar across all the remaining folders.
 
 ![](/s2and13.png)
 
-Here is what the papers.json looks like for ArnetMiner.
+The 3 main input files that we will feed into our model are:
+- arnetminer_papers.json
+- arnetminer_signatures.json
+- arnetminer_specter.pickle
+
+Note: arnetminer_clusters.json is the end result file that's generated after running the S2AND algorithm (we will revisit this shortly).
+
+## Papers.json
+Here is what *one* record looks like from the papers.json file.
+For this snippet, keep track of the **paper_id** field.
 
 ```json
 "15718873": {
@@ -102,7 +132,12 @@ Here is what the papers.json looks like for ArnetMiner.
     }
 ```
 
-Here is what the signatures.json file looks like for ArnetMiner:
+## Signatures.json
+
+Here are what two records looks like from the signatures.json file.
+Notice how these two in particular have the same **paper_id**; these are the separate instances for each author from the previous papers record with the same **paper_id**. 
+
+Despite sharing the same **paper_id**, these two records differ in a few other attributes. Specifically, both records have different **signature_id** values; this is the unique author-paper combination. Moreover, we find that the *position* value within the **author_info** field reflects the same *position* value from the papers.json file.
 
 ```json
 "34": {
@@ -142,12 +177,21 @@ Here is what the signatures.json file looks like for ArnetMiner:
         }
     }
 ```
+One thing to note: **author_id** can be duplicated for each record. This is because **author_id** is based on the author's name (first, middle, and last)--any author with the same *name* has the same **author_id** *but* different **signature_id**.
 
-Here is the relationship between papers and signatures:
+This is worth clarifying once more:
+- **signature_id**: Unique author name + paper combination
+- **author_id**: Unique author name combination
+
+## Relationship between Papers.json and Signatures.json
+The common variable between both of these datasets is quite simple: **signature_id** serves as a common key.
 
 ![](/s2and14.png)
 
-The specter.pickle is a pickle file that, when loaded into the python environment is a tuple of two elements.
+## Specter.pickle
+The last input file is the specter embeddings.
+
+The specter.pickle is a pickle file that, when loaded into the python environment, is a tuple of two elements.
 
 We may load the file by using the following snippet:
 
@@ -160,9 +204,11 @@ with open('data/arnetminer/arnetminer_specter.pickle', 'rb') as f:
     data = pickle.load(f)
 ```
 
-The structure of this tuple is:
-- data[0][n] reveals the numpy.ndarray (768,) dimension for the n-th record
+The structure of this tuple is as follows:
+- data[0][n] reveals the (768,) dimensional numpy.ndarray for the n-th record
 - data[1][n] reveals the paper id for the n-th record 
+
+For this particular dataset, the embeddings are based on the concatenation of the title and abstract; when we insert our own data, we may choose to replicate this process, or only embedd one over the other.
 
 Here is what the spectral embeddings pickle file (specter.pickle) looks like for one paper:
 
@@ -361,8 +407,11 @@ array([-3.55426264e+00, -3.36183834e+00, -9.27550435e-01,  1.05726647e+00,
         8.57315636e+00,  2.66784430e-03, -1.72782099e+00, -3.47309875e+00])
 ```
 
+Pretty cool, huh?
 
+# Output Data
 
+The goal of S2AND is to determine which set of **author_id**s represent the same author.
 
 And here is what the final clusters.json looks like:
 
@@ -421,4 +470,4 @@ And here is what the final clusters.json looks like:
     },
 ```
 
-Notice the last entry
+As we can see, the specific blocking method will vary, but the end result is the same: unique groupings for each set of **signature_ids**
