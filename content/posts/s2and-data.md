@@ -184,7 +184,7 @@ This is worth clarifying once more:
 - **author_id**: Unique author name combination
 
 ## Relationship between Papers.json and Signatures.json
-The common variable between both of these datasets is quite simple: **signature_id** serves as a common key.
+The common variable between both of these datasets is quite simple: **paper_id** serves as a common key.
 
 ![](/s2and14.png)
 
@@ -411,7 +411,7 @@ Pretty cool, huh?
 
 # Output Data
 
-The goal of S2AND is to determine which set of **author_id**s represent the same author.
+The goal of S2AND is to determine which set of **signature_ids**s represent the same author.
 
 And here is what the final clusters.json looks like:
 
