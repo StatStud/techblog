@@ -5,7 +5,7 @@ draft: false
 tags: ['NLP','BERT','GPT']
 ShowToc: true
 cover:
-    image: entity-linking1.jpeg
+    image: placeholder.webp
     alt: "Entity Linking"
     caption: ""
 ---
