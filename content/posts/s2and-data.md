@@ -142,6 +142,11 @@ Here is what the signatures.json file looks like for ArnetMiner:
         }
     }
 ```
+
+Here is the relationship between papers and signatures:
+
+![](/s2and14.png)
+
 The specter.pickle is a pickle file that, when loaded into the python environment is a tuple of two elements.
 
 We may load the file by using the following snippet:
