@@ -10,6 +10,11 @@ cover:
     caption: ""
 ---
 
+Here is what the full data directory looks like:
+
+![](/s2and12.png)
+
+
 Here is what the file structure looks like for one of the datasets (ArnetMiner)
 
 ![](/s2and13.png)
