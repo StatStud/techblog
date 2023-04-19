@@ -409,11 +409,13 @@ array([-3.55426264e+00, -3.36183834e+00, -9.27550435e-01,  1.05726647e+00,
 
 Pretty cool, huh?
 
-# Output Data
+# Ground Truth Data
+
+## clusters.json
 
 The goal of S2AND is to determine which set of **signature_ids**s represent the same author.
 
-And here is what the final clusters.json looks like:
+Some of the folders contain the ground truth for comparison; here is what the final clusters.json looks like:
 
 ```json
 "AM_ajay gupta_1": {
@@ -471,3 +473,67 @@ And here is what the final clusters.json looks like:
 ```
 
 As we can see, the specific blocking method will vary, but the end result is the same: unique groupings for each set of **signature_ids**
+
+# Generating our own data
+
+For this step, we will need to generate two files to get started: (1) papers.json (2) signatures.json.
+
+While we may scrape the web for author information, for the purposes of this demo, we may instead choose to create synthetic data that illustrates the same point.
+
+## Using ChatGPT
+
+Using ChatGPT, I was able to generate the two files.
+
+I first started with papers.json, since signatures.json would be based off of the authors presented in the papers.
+
+I prompted my query to ChatGPT by provided the details of what the fields in the papers.json would appear, and also providing one example record from the S2AND datasets.
+
+You can view the full ChatGPT chat log [here](https://github.com/StatStud/s2and-demo/blob/main/chatgpt_convo.txt) as a text file.
+
+Once I had a set of 6 records for the papers.json, it was now time to create the signatures.json file.
+
+Since signatures.json file is simply a unique author-paper combo, which is based off of papers.json, we can easily create a function that parses through the author names, collects the meta data (names, position, paper_id), *and* automatically create out blocking schema.
+
+Here's what the function looks like:
+
+```python
+import random
+
+def generate_signatures():
+  with open('papers.json') as f:
+    papers = json.load(f)
+  signatures = {}
+  author_id_set = set()
+  for paper_id, paper in papers.items():
+    for author in paper['authors']:
+      author_id = random.randint(1000000, 9999999)
+      while author_id in author_id_set:
+        author_id = random.randint(1000000, 9999999)
+      author_id_set.add(author_id)
+      signature_id = len(signatures)
+      given_block = author['author_name'].split()[0][0].lower()
+      last_name = author['author_name'].split()[-1].lower()
+      block = given_block + ' ' + last_name
+      author_info = {
+        'given_block': given_block + ' ' + last_name,
+        'block': block,
+        'position': author['position'],
+        'first': author['author_name'].split()[0],
+        'middle': ' '.join(author['author_name'].split()[1:-1]) or None,
+        'last': last_name,
+        'suffix': None,
+        'affiliations': [],
+        'email': None
+      }
+      signatures[str(signature_id)] = {
+        'author_id': author_id,
+        'paper_id': int(paper_id),
+        'signature_id': str(signature_id),
+        'author_info': author_info
+      }
+  with open('signatures.json', 'w') as f:
+    json.dump(signatures, f, indent=4)
+  return 2
+  ```
+
+  As you can see, this function creates the signatures.json for us, and since this is a synthetic dataset for demonstration purposes, we can fill in the additional fields (email and affiliation) as we please.
