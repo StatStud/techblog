@@ -137,8 +137,24 @@ Here is what the signatures.json file looks like for ArnetMiner:
         }
     }
 ```
+The specter.pickle is a pickle file that, when loaded into the python environment is a tuple of two elements.
 
-Here is what the spectral embeddings pickle files looks like for one paper:
+We may load the file by using the following snippet:
+
+```python
+import pickle
+
+# Open the pickle file for reading
+with open('data/arnetminer/arnetminer_specter.pickle', 'rb') as f:
+    # Load the pickled data into a variable
+    data = pickle.load(f)
+```
+
+The structure of this tuple is:
+- data[0][n] reveals the numpy.ndarray (768,) dimension for the n-th record
+- data[1][n] reveals the paper id for the n-th record 
+
+Here is what the spectral embeddings pickle file (specter.pickle) looks like for one paper:
 
 ```python
 array([-3.55426264e+00, -3.36183834e+00, -9.27550435e-01,  1.05726647e+00,
