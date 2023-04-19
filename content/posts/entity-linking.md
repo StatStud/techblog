@@ -79,3 +79,4 @@ NOTE: Allen AI also has a web demo for the SRL model that anyone can try [here](
 
 ## Similarity Search via nearest neighbors
 
+Using the saved pre-embedding file that we computed earlier, we now begin to embedd each query using our same huggingface model, and compute the embedding distance between that query and all of the embedded terms from the saved file.
