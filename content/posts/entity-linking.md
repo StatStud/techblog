@@ -5,7 +5,7 @@ draft: false
 tags: ['NLP','SRL','NER','FAISS']
 ShowToc: true
 cover:
-    image: entity-linking1.jpeg
+    image: entity-linking1.png
     alt: "Entity Linking"
     caption: ""
 ---
