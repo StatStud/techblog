@@ -49,3 +49,8 @@ BERT can be fine-tuned for a wide range of tasks, including both classification 
 when fine-tuning GPT for text classification, you can give it a classifier head in the same way you do with BERT.
 
 In fact, using a classifier head is a common approach for fine-tuning GPT for classification tasks. The classifier head is typically added on top of the GPT model's output layer, which consists of a sequence of vectors that represent the probability distribution over the vocabulary of the next word in a given input sequence.
+
+
+# My Code
+
+I have tried GPT-J [here](https://github.com/StatStud/GPT-J/blob/main/first.py).
