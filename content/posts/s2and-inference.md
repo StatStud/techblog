@@ -51,9 +51,8 @@ After running the model on our generated data, where's what the output for the v
 ```sh
 {'c raffel_0': ['0'],
  'n shazeer_0': ['1'],
- 'a roberts_1': ['2'],
- 'a roberts_3': ['12'],
- 'a roberts_2': ['21'],
+ 'a roberts_1': ['2', '21'],
+ 'a roberts_2': ['12'],
  'k lee_1': ['3'],
  'k lee_2': ['18'],
  's narang_0': ['4'],
@@ -82,33 +81,116 @@ After running the model on our generated data, where's what the output for the v
 
  What does this practically mean? Recall that our signatures.json has 27 total records, but only 23 unique names--specifically, the names ['Katherine Lee', 'Wei Li', 'Adam Roberts'] are the ones with duplicates.
 
- So our question becomes: 
- 
+## Similar names, different people
+
+ Let's start with 'Katherine Lee'; her name is mentioned twice in two different papers--are these the same person?
+
+ ```sh
+    "3": {
+        "author_id": 8130398,
+        "paper_id": 0,
+        "signature_id": "3",
+        "author_info": {
+            "given_block": "k lee",
+            "block": "k lee",
+            "position": 3,
+            "first": "Katherine",
+            "middle": null,
+            "last": "lee",
+            "suffix": null,
+            "affiliations": [],
+            "email": null
+        },
+    "18": {
+        "author_id": 1659573,
+        "paper_id": 3,
+        "signature_id": "18",
+        "author_info": {
+            "given_block": "k lee",
+            "block": "k lee",
+            "position": 1,
+            "first": "Katherine",
+            "middle": null,
+            "last": "lee",
+            "suffix": null,
+            "affiliations": [],
+            "email": null
+        }
+ ```
+
+If we look for 'Katherine Lee' in the signatures.json, we find that the signatures_ids that correspond to 'Katherine Lee' are 3 and 18.
+
+ ```sh
+ 'k lee_1': ['3'],
+ 'k lee_2': ['18'],
+ ```
+
+Looking at the output from the model, we see that signature_ids 3 and 18 are placed in two distinct buckets ('k lee_1', and 'k lee_2', respectively).
+
+This means the model predicts the two mentions of 'Katherine Lee' are two *separate* people.
+
+## Similar names, same person
+
+Now let's look at another example
+
+```sh
+    "2": {
+        "author_id": 1992890,
+        "paper_id": 0,
+        "signature_id": "2",
+        "author_info": {
+            "given_block": "a roberts",
+            "block": "a roberts",
+            "position": 2,
+            "first": "Adam",
+            "middle": null,
+            "last": "roberts",
+            "suffix": null,
+            "affiliations": [],
+            "email": null
+        }, 
+    "21": {
+        "author_id": 4297540,
+        "paper_id": 4,
+        "signature_id": "21",
+        "author_info": {
+            "given_block": "a roberts",
+            "block": "a roberts",
+            "position": 1,
+            "first": "Adam",
+            "middle": null,
+            "last": "roberts",
+            "suffix": null,
+            "affiliations": [],
+            "email": null
+        }
+```
+
  Is 'Adam Roberts' from the paper titled "Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer" (paper_id 0) the *same* 'Adam Roberts' from the paper titled "Robust Multi-Agent Reinforcement Learning with Incomplete Information" (paper_id 4)?
 
- According to the above results, the model predicts that the answer is *no*.
+
+```sh
+ 'a roberts_1': ['2', '21'],
+ 'a roberts_2': ['12'],
+```
+ According to the above results, the model predicts that the answer is **yes**.
 
  Why? 
- 
- First because there there are no more than one listed signatures for any given block (this means all 27 names are represent unique people).
 
- Second, when you look specifically at the "a roberts_#" section, you see that the signature_id 21 (which corresponds to paper_id 4, when looking at both signatures.json and papers.json) is in it's own bucket ('a roberts_2'), whereas the signature_id 2 (which corresponds to paper_id 0) is also in a separate bucket ( 'a roberts_1').
+ Because we see that signature_ids 2 and 21 are grouped in the same bucket, and hence considered to be the same person.
 
- ```sh
- 'a roberts_1': ['2'],
- 'a roberts_3': ['12'],
- 'a roberts_2': ['21']
- ```
+## Same Names, but different people
 
- # How can we tell if a group of people are the same?
-
-Now, here's how the results would look if all three mentions of Adam Roberts referred to the *same* person:
+ But what about Adam Roberts from the paper "Toward Personalized Conversational Agents: A Longitudinal Field Study of a Knowledge-Grounded Chatbot"? Is this Adam Roberts the same person from the other two papers?
 
  ```sh
- 'a roberts_1': ['2, 12, 21']
- ```
+ 'a roberts_1': ['2', '21'],
+ 'a roberts_2': ['12'],
+```
 
- As you see in this case, all three signatures_ids that refer to Adam Roberts are grouped in the same bucket ('a roberts_1'); this would indicate that the paper_ids that correspond to these signature_ids all refer to the same person.
+According to the model output, the predicted answer is **no**, because the signature_id that corresponds with this author is in a *separate* bucket from the other mentions of Adam Roberts.
+
+So, out of three mentions of the name "Adam Roberts", two of them are predicted to refer to the same author, while the other one is likely to be a different person with the same name (Just like the same with Katherine Lee).
 
  # Great, so how can we practically use this output?
 
