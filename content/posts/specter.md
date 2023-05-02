@@ -84,7 +84,7 @@ if __name__ == '__main__':
 To run this script, all you need to type in the command line is:
 
 ```sh
-python specter.py **papers.json** **embeddings.pkl** **data_dir** 
+python specter.py papers.json embeddings.pkl data_dir 
 ```
 
 Where:
