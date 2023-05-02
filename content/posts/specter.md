@@ -1,5 +1,5 @@
 ---
-title: "Specter"
+title: "Specter Embeddings for Author Disambiguation"
 date: 2023-05-02T10:55:01-04:00
 draft: false
 tags: ['author-disambiguation','specter-embeddings']
