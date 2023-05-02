@@ -2,7 +2,7 @@
 title: "S2AND Inference on Custom Data"
 date: 2023-05-02T11:25:49-04:00
 draft: false
-tags: []
+tags: ['author-disambiguation']
 ShowToc: true
 cover:
     image: s2and2.png
@@ -15,6 +15,8 @@ cover:
 In this post, we actually run the saved model we have on file on the our own custom dataset.
 
 # The Code 
+
+Run this code below on your given dataset to get model predictions.
 
 ```python
 import pickle
