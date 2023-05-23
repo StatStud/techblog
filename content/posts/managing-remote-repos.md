@@ -54,6 +54,12 @@ The command follows the syntax: git remote add <remote_name> <remote_url>.
 
 Given the prevalence of remote hosting sites, you can add multiple remote repositories to your local repository to facilitate collaboration and code distribution across various platforms, just be sure to choose a useful remote name for each of the hosts to which you plan to push code.
 
+To view the list of configured remote repositories, you can use the command:
+```sh
+git remote -v command.
+```
+
+
 # Pushing to GitLab, Bitbucket, Stash, or whatever the cool kids are using these days
 
 What if you're team prefers to use gitlab instead, just because they're that cool. What do you do then?
