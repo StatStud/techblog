@@ -36,7 +36,23 @@ or simply
 git push
 ```
 
-if you've already configured your remote remote
+But, keep in mind that this is only possible because, when setting up a remote for the first time, you may remember typing something like:
+```sh
+git remote add origin https://github.com/username/project.git
+```
+
+## The Git Remote Add command
+
+The "git remote add" command is a fundamental tool in Git that allows you to connect your *local* repository with *remote* repositories.
+
+By adding remote repositories, you gain the ability to push your changes to a central location, collaborate with others, and synchronize your codebase.
+
+The command follows the syntax: git remote add <remote_name> <remote_url>.
+- <remote_name> is a meaningful name **YOU** assign to the remote repository, allowing you to refer to it easily in future Git commands.
+    - By default, git will push ("git push") any changes to "origin", unless otherwise specified
+- <remote_url> specifies the URL or location of the remote repository, which can be hosted on services like GitHub, Bitbucket, GitLab, or self-hosted Git servers.
+
+Given the prevalence of remote hosting sites, you can add multiple remote repositories to your local repository to facilitate collaboration and code distribution across various platforms, just be sure to choose a useful remote name for each of the hosts to which you plan to push code.
 
 # Pushing to GitLab, Bitbucket, Stash, or whatever the cool kids are using these days
 
