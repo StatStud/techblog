@@ -60,7 +60,7 @@ Given the prevalence of remote hosting sites, you can add multiple remote reposi
 
 To view the list of configured remote repositories, you can use the command:
 ```sh
-git remote -v command.
+git remote -v
 ```
 
 
