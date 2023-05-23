@@ -47,7 +47,11 @@ The "git remote add" command is a fundamental tool in Git that allows you to con
 
 By adding remote repositories, you gain the ability to push your changes to a central location, collaborate with others, and synchronize your codebase.
 
-The command follows the syntax: git remote add <remote_name> <remote_url>.
+The command follows the syntax: 
+```sh
+git remote add <remote_name> <remote_url>
+```
+
 - <remote_name> is a meaningful name **YOU** assign to the remote repository, allowing you to refer to it easily in future Git commands.
     - By default, git will push ("git push") any changes to "origin", unless otherwise specified
 - <remote_url> specifies the URL or location of the remote repository, which can be hosted on services like GitHub, Bitbucket, GitLab, or self-hosted Git servers.
