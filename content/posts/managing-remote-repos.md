@@ -1,5 +1,5 @@
 ---
-title: "Managing Remote Repositories"
+title: "Git Remote Add: Managing Remote Repositories"
 date: 2023-05-23T11:41:57-07:00
 draft: false
 tags: []
