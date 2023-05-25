@@ -33,6 +33,26 @@ What about status messages and errors? Yup, you guessed it: *standard error* (st
 
 I found this really cool, because these are actual files on your computer that you can look at, rather than some weird "black-box" magic that comes somewhere from the computer.
 
+To redirect stdout to another file (let's say in the case you're running a machine learning model, and wish to save the output to a text file), you can type something like:
+
+```sh
+python model.py > results.txt
+```
+
+But let's say you already have a file on hand, and wish to *append* the results? Just use a double arrow:
+
+```sh
+python model.py > results.txt
+```
+
+To output both stdout and stderr, you can run:
+
+```sh
+python model.py > results.txt 2>&1 
+```
+
+Note that in the above example, I used "2"--this is a file descriptor, and linux has a reference for all three types of output: (0) standard input (1) standard output (2) standard error 
+
 ### Chapter 7: Seeing the world as the Shell sees it
 ### Chapter 8: Advance Keyboard Tricks
 ### Chapter 9: Permissions
