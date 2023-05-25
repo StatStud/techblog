@@ -91,6 +91,39 @@ This chapter also reviews the pipe operator. The best comparison between the red
 
 ### Chapter 7: Seeing the world as the Shell sees it
 ### Chapter 8: Advance Keyboard Tricks
+
+The cool trick I learned here was the "history" command.
+
+When you type 'history' into the terminal, you may get something like this:
+```sh
+1032  rm test.txt
+ 1033  clear
+ 1034  cat > test.txt
+ 1035  cat test.txt
+ 1036  cat < test.txt
+ 1037  git_push
+ 1038  clear
+ 1039  git_push
+ 1040  clear
+ 1041  cat
+ 1042  clear
+ 1043  clear
+ 1044  history
+ 1045  1034
+ 1046  cat > test.txt
+ 1047  clear
+ ```
+
+ This keeps track of your most recent commands, (rather than using the up arrow and hoping to get your original command).
+
+ To run a command from your stored history, simply start with a factorial (!) and the number:
+
+ ```sh
+!1046
+ ```
+
+ This will translate to running the 'cat > test.txt' command I ran earlier.
+
 ### Chapter 9: Permissions
 ### Chapter 10: Processes 
 ## Part 2: Configuration and the Environment
