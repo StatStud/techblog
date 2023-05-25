@@ -125,6 +125,41 @@ When you type 'history' into the terminal, you may get something like this:
  This will translate to running the 'cat > test.txt' command I ran earlier.
 
 ### Chapter 9: Permissions
+
+This chapter finally made scene of the chmod command.
+
+For a long time, I simply used "chmod 755" for all files. Now, I actually see the meaning behind this.
+
+When you type "ls -l" in the command line, you get something like this:
+```sh
+drwxr-xr-x   3 afm18d  staff    96 Mar 19 14:39 archetypes
+-rw-r--r--@  1 afm18d  staff  1019 Mar 27 20:04 config.yml
+drwxr-xr-x   6 afm18d  staff   192 May  9 22:15 content
+drwxr-xr-x  40 afm18d  staff  1280 Mar 26 19:29 public
+drwxr-xr-x   3 afm18d  staff    96 Mar 19 14:39 resources
+drwxr-xr-x  48 afm18d  staff  1536 May 25 18:36 static
+drwxr-xr-x   4 afm18d  staff   128 Mar 19 14:39 themes
+```
+
+Ignore the other output and pay attention to the left column.
+The very first character defines the type of element ('-', like '-rw-r--r--@' mean that it's a file, while 'd', like 'drwxr-xr-x', means it's a folder/directory).
+
+The magic of '755' comes in the triples. Take for example "drwxr-xr-x". Ignoring the first character, we're left wit "rwxr-xr-x"--these are exactly 3 sets of 3 characters (9 characters total). The first three are permissions for the owner/user, the second three are permissions for the group (people who have special access to this linux machine), and the last three are permissions for everyone else who has access to this linux machine.
+
+so, for each group, we have the following combinations available:
+- rwx: full reading, writing/editing, and execution permissions.
+- r--: read only permissions
+- -w-: right only permissions
+- --x: executable permissions only.
+- And then any combination in between one type of permission and all three
+
+So, because we have 3 options (-,-,-), imagine that each spot is a binary place holder. It's literally binary code! So full permissions (rwx) would be (1-1-1), which, in binary, equals 7. 
+
+If we want reading permissions and executable permissions only (r-x), then it becomes (1-0-1), or 5.
+
+And because chmod changes permissions for all three groups of people (user/owner, group, and everyone else), it makes scene why "chmod 755" is so common--it gives user/owner full permissions, and everyone else the basic reading and executing permissions (without overwriting or editing the file). Chmod 777 would be *everyone* has full permissions on the file/folder.
+
+
 ### Chapter 10: Processes 
 ## Part 2: Configuration and the Environment
 ### Chapter 11: The environment
