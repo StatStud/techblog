@@ -10,6 +10,10 @@ cover:
     caption: ""
 ---
 
+# Introduction 
+
+This is my personal review of the book "The Linux Command Line" by William Shotts. I provide the table of contents, and provide summaries on chapters that I personally found interesting.
+
 # Table of Contents
 ## Part 1: Learning the Shell
 ### Chapter 1: What is the shell?
@@ -82,6 +86,8 @@ To view what you types, simply run:
 cat test.txt
 ```
 This will display the entire contents of test.txt on the command line (note: if this is a big file, you can alternatively type 'head -n 5' to show only the first 5 lines.)
+
+This chapter also reviews the pipe operator. The best comparison between the redirect (>) and pipe (|) operators is that the redirection operator *connects a command with a file*, while the pipe operator *connects the output of one command with the input of the second command*. 
 
 ### Chapter 7: Seeing the world as the Shell sees it
 ### Chapter 8: Advance Keyboard Tricks
