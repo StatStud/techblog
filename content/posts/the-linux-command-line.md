@@ -63,6 +63,26 @@ python model.py 2> /dev/null
 
 This particular command will throw all error messages (because we used the "2" file descriptor) to the *bit bucket*, which accepts input and does nothing with it.
 
+![](/the-linux-command-line1.png)
+
+We can also work with changing the standard input (where we type).
+The "cat" command is key for this, and using the redirect arrow (>) to point to a file, we can literally create a text file (or really, any file type) on command!
+
+```sh
+cat > test.txt
+```
+
+
+Typing the above command will convert the command line into a simple and super basic word possessor! You literally just start typing away!
+
+When you're finished, press "ctrl + D" to exit out of typing mode. This will save a file called "test.txt" with whatever you inputted.
+
+To view what you types, simply run:
+```sh
+cat test.txt
+```
+This will display the entire contents of test.txt on the command line (note: if this is a big file, you can alternatively type 'head -n 5' to show only the first 5 lines.)
+
 ### Chapter 7: Seeing the world as the Shell sees it
 ### Chapter 8: Advance Keyboard Tricks
 ### Chapter 9: Permissions
