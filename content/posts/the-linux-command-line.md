@@ -51,7 +51,17 @@ To output both stdout and stderr, you can run:
 python model.py > results.txt 2>&1 
 ```
 
-Note that in the above example, I used "2"--this is a file descriptor, and linux has a reference for all three types of output: (0) standard input (1) standard output (2) standard error 
+Note that in the above example, I used "2"--this is a file descriptor, and linux has a reference for all three types of output: (0) standard input (1) standard output (2) standard error.
+
+Interestingly enough, I also learned about the meaning behind "bit bucket". At first, I though bit bucket was just another [online repo](https://bitbucket.org/product). But it turns out, the name actually refers to something!
+
+It turns out, when you don't want *any* output from a command, and are okay with "trowing it out", you can point your output to the */dev/null*
+
+```sh
+python model.py 2> /dev/null
+```
+
+This particular command will throw all error messages (because we used the "2" file descriptor) to the *bit bucket*, which accepts input and does nothing with it.
 
 ### Chapter 7: Seeing the world as the Shell sees it
 ### Chapter 8: Advance Keyboard Tricks
