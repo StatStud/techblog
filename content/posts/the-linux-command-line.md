@@ -2,7 +2,7 @@
 title: "The Linux Command Line"
 date: 2023-05-25T17:54:12-04:00
 draft: false
-tags: []
+tags: ['Books','linux']
 ShowToc: true
 cover:
     image: the-linux-command-line.png
