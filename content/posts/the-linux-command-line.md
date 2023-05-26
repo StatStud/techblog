@@ -16,6 +16,11 @@ This is my personal review of the book "The Linux Command Line" by William Shott
 
 # Table of Contents
 ## Part 1: Learning the Shell
+
+Most of these chapters show basic commands and syntax.
+You may find some useful ones that are new to you, but
+for the most part, this is a pretty basic run through.
+
 ### Chapter 1: What is the shell?
 ### Chapter 2: Navigation
 ### Chapter 3: Exploring the system
@@ -164,6 +169,7 @@ And because chmod changes permissions for all three groups of people (user/owner
 ## Part 2: Configuration and the Environment
 ### Chapter 11: The environment
 ### Chapter 12: A gentle introduction to vi
+Lol, nano rules
 ### Chapter 13: Customizing the prompt
 ## Part 3: Common Tasks and Essential Tools
 ### Chapter 14: Package management
