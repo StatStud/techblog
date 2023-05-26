@@ -179,6 +179,18 @@ I should review this another time, but I skimmed this section
 ### Chapter 16: Networking
 ### Chapter 17: Searching for Files
 ### Chapter 18: Archiving and Backup
+
+In this chapter, I learned about tar and gzip.
+Tar simply bundles files together, while gzip will
+zip the files together and compress the memory footprint.
+Often, tar and gzip are used together to create .tar.gz or .tgz files.
+
+Then we have the classic zip command. Understand that tar and gzip together to create a .tar.gz or .tgz file achieves a similar effect to zipping a file with the zip utility to create a .zip file. 
+
+Both approaches result in compressed archives that bundle multiple files and directories into a single file.
+
+In other words, just use zip for most of your cases :P.
+
 ### Chapter 19: Regular Expressions
 ### Chapter 20: Text Processing
 ### Chapter 21: Formatting Output
