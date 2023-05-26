@@ -174,6 +174,8 @@ Lol, nano rules
 ## Part 3: Common Tasks and Essential Tools
 ### Chapter 14: Package management
 ### Chapter 15: Storage Media
+This chapter when into the details of mounting.
+I should review this another time, but I skimmed this section
 ### Chapter 16: Networking
 ### Chapter 17: Searching for Files
 ### Chapter 18: Archiving and Backup
