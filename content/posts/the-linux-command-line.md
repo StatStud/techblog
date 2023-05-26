@@ -21,6 +21,8 @@ Most of these chapters show basic commands and syntax.
 You may find some useful ones that are new to you, but
 for the most part, this is a pretty basic run through.
 
+From a beginner's perspective, part 1 is the bare-bones essentials on how to navigate the shell.
+
 ### Chapter 1: What is the shell?
 ### Chapter 2: Navigation
 ### Chapter 3: Exploring the system
@@ -172,6 +174,9 @@ And because chmod changes permissions for all three groups of people (user/owner
 Lol, nano rules
 ### Chapter 13: Customizing the prompt
 ## Part 3: Common Tasks and Essential Tools
+
+Whereas part 1 focused on the bare essentials to navigate the command line, part 3 introduces commonly used commands that serve practical, general purposes for a variety of tasks. The chapters can be read in any order.
+
 ### Chapter 14: Package management
 ### Chapter 15: Storage Media
 This chapter when into the details of mounting.
@@ -184,10 +189,41 @@ I should review this another time, but I skimmed this section
 ### Chapter 21: Formatting Output
 ### Chapter 22: Printing
 ### Chapter 23: Compiling Programs
-## Part 4: Writing Shell Scripts
+## Part 4: Writing Shell Scripts 
 ### Chapter 24: Writing your first script
+
+The #! character sequence is, in fact, a special construct called a *shebang*. The shebang is used to tell the kernel the name of the *interpreter* that should be used to execute the script that follows. Every shell script should include this as its first line.
+
+After creating a script with the right permissions, you run it by using:
+```sh
+./script.sh
+```
+
+To run the script without the (./), simply move the file to one of the $PATH directories listed.
+
+```sh
+[me@linuxbox ~]$ mkdir bin 
+[me@linuxbox ~]$ mv hello_world bin 
+[me@linuxbox ~]$ hello_world
+Hello World!
+```
+
+Then, to add the newly created bin folder into the $PATH variable, simply type:
+```sh
+export PATH=~/bin:"$PATH"
+```
+
+Knowing that we can put two variables side-by-side to concatenate (without any operator), and knowing that the colon (:) is specifically used in the $PATH variable to delimite all the different executable paths.
+
+The ~/bin directory is a good place to put scripts intended for personal use. If we write a script that everyone on a system is allowed to use, the traditional location is /usr/ local/bin.
+
 ### Chapter 25: Starting a project
+
+Hey! Our first project! 
 ### Chapter 26: Top-Down Design
+
+The equivalent of "input" from python for reading standard input is "read" in linux
+
 ### Chapter 27: Flow Control: Branching with IF
 ### Chapter 28: Reading keyboard inputs
 ### Chapter 29: Flow Control: Looping with while/until
@@ -199,5 +235,9 @@ I should review this another time, but I skimmed this section
 ### Chapter 35: Arrays
 ### Chapter 36: Exotica
 
+# My overall thoughts on the book
 
+If I were reading this as a first-time user, I would have personally preferred more project-based examples, rather than simple "do-it-and-forget-it" commands that we test run form the terminal. That being said, it is probably one of the easier books to get your feet wet with simply interacting with the command line--for that purpose, I think this would be a solid book for someone who is just starting out and wants to know what to type to even get started. Each chapter has a direct focus, and it does not go too deep into the weeds of linux kernel, while still providing enough snippets of background information for us to appreciate. Part 4 of the book did a great job in combining as many of the previous lessons we learned into longer scripts.
+
+My rating for this book (without using 7)? 8/10.
 
