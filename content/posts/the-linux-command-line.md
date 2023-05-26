@@ -1,5 +1,5 @@
 ---
-title: "The Linux Command Line"
+title: "Book Review: The Linux Command Line"
 date: 2023-05-25T17:54:12-04:00
 draft: false
 tags: ['Books','linux']
