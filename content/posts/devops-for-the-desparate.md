@@ -13,6 +13,15 @@ cover:
 
 # PART I: INFRASTRUCTURE AS CODE, CONFIGURATION MANAGEMENT, SECURITY, AND ADMINISTRATION
 # Chapter 1: Setting Up a Virtual Machine
+
+Infrastructure as Code (IaC) and Configuration Management (CM).
+
+IaC is the process of using code to describe and manage infrastructure (VMs, network switches, and cloud resources like AWS). The benefit of IaC is the ease of deployment because applications are built and tested the same way in every delivery pipeline. The drawbacks of IaC is that provisioning can take some time and organization, which may not be needed if you're doing simple code tests on your local machine; it's a tradeoff between deployment and creating scrappy MVPs
+
+CM is the process of configuring those resources for a specific purpose in a predictable and repeatable manner.
+
+Vagrant and Ansible are two examples of IaC and CM, respectively. Please note that Vagrant itself is not a VM, but rather a framework for managing VMs--there's a difference. 
+
 # Chapter 2: Using Ansible to Manage Passwords, Users, and Groups
 # Chapter 3: Using Ansible to Configure SSH
 # Chapter 4: Controlling User Commands with sudo
