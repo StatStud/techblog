@@ -20,7 +20,13 @@ IaC is the process of using code to describe and manage infrastructure (VMs, net
 
 CM is the process of configuring those resources for a specific purpose in a predictable and repeatable manner.
 
-Vagrant and Ansible are two examples of IaC and CM, respectively. Please note that Vagrant itself is not a VM, but rather a framework for managing VMs--there's a difference. 
+Vagrant and Ansible are two examples of IaC and CM, respectively. Please note that Vagrant itself is not a VM, but rather a framework for managing VMs--there's a difference.
+
+## Modifications to this chapter
+
+Because I'm using an Apple Silicon computer as my host machine, VirtualBox is not an option. Apple Silicon’s CPU is based off the ARM architecture, and VirtualBox only works on x86. :(
+
+    
 
 # Chapter 2: Using Ansible to Manage Passwords, Users, and Groups
 # Chapter 3: Using Ansible to Configure SSH
