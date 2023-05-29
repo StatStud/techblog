@@ -30,6 +30,22 @@ The information suggests that we are using the Darwin operating system with a ke
 
 In other words, it's highly *likely* that we are running macOS on our system.
 
+## Side Note
+
+In addition to checking the distribution, you can also run the following to get the type of archeceture:
+
+```sh
+uname -m
+```
+
+This will output something like:
+
+```sh
+x86_64
+```
+
+Knowing this will be helpful when downloading certain software.
+
 # Method 2
 
 ```sh
