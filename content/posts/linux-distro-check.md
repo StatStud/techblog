@@ -52,7 +52,10 @@ Knowing this will be helpful when downloading certain software.
 cat /etc/*-release
 ```
 
-This will output something that looks like this:
+Here, we use the asterisk wildcard (*) to search for any file with the suffix "-release".
+We're actually looking for a file named "os-release", but this may not have the same name across all devices.
+Regardless, when such a file is found, the output will look something like this:
+
 
 ```sh
 CentOS Linux release 7.8.2003 (Core)
