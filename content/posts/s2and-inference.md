@@ -8,6 +8,7 @@ cover:
     image: s2and2.png
     alt: ""
     caption: ""
+ShowCodeCopyButtons: true
 ---
 
 # Introduction
