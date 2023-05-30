@@ -8,6 +8,7 @@ cover:
     image: port_forward.png
     alt: "Port Forwarding"
     caption: ""
+ShowCodeCopyButtons: true
 ---
 
 # Port forwarding onto a single remote server

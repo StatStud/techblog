@@ -4,6 +4,7 @@ date: 2022-08-27T15:18:24-04:00
 draft: false
 ShowToc: true
 tags: ['draft']
+ShowCodeCopyButtons: true
 ---
 
 In this post, I will demonstrate mostly my skills in using the markdown langauge. I will basically try to copy Lil'Log's post, and practice with various useful formatting methods like headers, quotes, questions, lists, and the like. I hope you all enjoy!

@@ -8,6 +8,7 @@ cover:
     image: ddb1.png
     alt: "Diseases Database"
     caption: ""
+ShowCodeCopyButtons: true
 ---
 
 # Introduction

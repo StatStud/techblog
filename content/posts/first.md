@@ -7,6 +7,7 @@ cover:
     alt: "here is my first picture. Cira 2022"
     caption: "here is what the caption looks like"
 tags: ["draft"]
+ShowCodeCopyButtons: true
 ---
 
 yeeh yeet. Here we go!

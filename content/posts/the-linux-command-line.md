@@ -8,6 +8,7 @@ cover:
     image: the-linux-command-line.png
     alt: ""
     caption: ""
+ShowCodeCopyButtons: true
 ---
 
 # Introduction 

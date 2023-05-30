@@ -8,6 +8,7 @@ cover:
     image: insta2.png
     alt: "Instagram"
     caption: ""
+ShowCodeCopyButtons: true
 ---
 # Introduction
 

@@ -8,6 +8,7 @@ cover:
     image: linux.png
     alt: ""
     caption: ""
+ShowCodeCopyButtons: true
 ---
 
 # TL;DR

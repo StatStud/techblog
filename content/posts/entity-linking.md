@@ -8,6 +8,7 @@ cover:
     image: entity-linking1.png
     alt: "Entity Linking"
     caption: ""
+ShowCodeCopyButtons: true
 ---
 
 # Introduction

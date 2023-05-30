@@ -8,6 +8,7 @@ cover:
     image: command-l.png
     alt: ""
     caption: ""
+ShowCodeCopyButtons: true
 ---
 
 I am now one step closer to not needing my mouse!

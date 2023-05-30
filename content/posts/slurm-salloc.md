@@ -8,6 +8,7 @@ cover:
     image: slurm.png
     alt: "Cover"
     caption: ""
+ShowCodeCopyButtons: true
 ---
 
 # Introduction

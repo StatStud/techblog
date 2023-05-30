@@ -8,6 +8,7 @@ cover:
     image: USMLElogo.png
     alt: "USMLE logo"
     caption: ""
+ShowCodeCopyButtons: true
 ---
 
 # Introduction

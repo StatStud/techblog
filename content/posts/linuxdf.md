@@ -8,6 +8,7 @@ cover:
     image: linux.png
     alt: ""
     caption: ""
+ShowCodeCopyButtons: true
 ---
 
 # Checking disk space

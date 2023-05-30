@@ -8,6 +8,7 @@ cover:
     image: s2and1.png
     alt: "S2AND Algorithm"
     caption: ""
+ShowCodeCopyButtons: true
 ---
 
 # Introduction

@@ -8,6 +8,7 @@ cover:
     image: oreill1y-php.jpeg
     alt: "Cover"
     caption: ""
+ShowCodeCopyButtons: true
 ---
 
 Sixth Edition, By Robin Nixon

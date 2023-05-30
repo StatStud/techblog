@@ -8,6 +8,7 @@ cover:
     image: specter.png
     alt: ""
     caption: ""
+ShowCodeCopyButtons: true
 ---
 
 # Introduction 

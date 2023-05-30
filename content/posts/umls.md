@@ -8,6 +8,7 @@ cover:
     image: umls1.png
     alt: "UMLS"
     caption: ""
+ShowCodeCopyButtons: true
 ---
 
 # The UMLS Explained

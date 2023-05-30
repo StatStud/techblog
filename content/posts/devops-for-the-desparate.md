@@ -8,6 +8,7 @@ cover:
     image: devops-for-the-desperate.png
     alt: ""
     caption: ""
+ShowCodeCopyButtons: true
 ---
 
 
