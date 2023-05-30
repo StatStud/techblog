@@ -8,5 +8,6 @@ cover:
     image: placeholder.png
     alt: ""
     caption: ""
+ShowCodeCopyButtons: true
 ---
 
