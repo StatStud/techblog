@@ -27,4 +27,4 @@ But none of these tricks really mattered if I end up moving my mouse a few pixel
 
 That's when I discovered: cmd + L
 
-I fuck keyboard shortcuts.
+I love keyboard shortcuts.
