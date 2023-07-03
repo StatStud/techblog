@@ -73,3 +73,11 @@ Where:
 - p is the probability of success on a single trial.
 - q is the probability of failure on a single trial (q = 1 - p).
 - C(n, k) represents the binomial coefficient, which is calculated as n! / (k! * (n - k)!)
+
+## The Beta Distribution
+
+> In real life we are almost never sure what the exact probability of any event is; instead, we just have observations and data.
+
+This is the statement that separates statistics from probability.
+
+In probability, we know exactly how probable events are. In statistics, we look at the problem in reverse, and the task of figuring out probabilities given data is called *inference*. 
