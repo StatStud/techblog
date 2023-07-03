@@ -81,3 +81,11 @@ Where:
 This is the statement that separates statistics from probability.
 
 In probability, we know exactly how probable events are. In statistics, we look at the problem in reverse, and the task of figuring out probabilities given data is called *inference*. 
+
+The binomial formula works well **only when we know the probability of success, p.**, but what do we do when we're not certain what that probability is?
+
+That's exactly where the beta distribution comes in. The beta distribution gives us the ability **to determine the probability of a collection of probabilities**
+
+> The beta distribution helps us determine the probability of a collection (distribution) of probabilities that could represent the true value of p (probability of success) in a binomial distribution
+
+> The true value of p is one that we can infer to be the **most probable** from the beta distribution
