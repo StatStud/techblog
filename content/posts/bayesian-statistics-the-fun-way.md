@@ -206,6 +206,10 @@ But the alternative could be true; it could be the case that the other person's 
 
 The remainder of this chapter uses a really cool and easy to follow example of testing our with dice.
 
+It's important to note that while the bayes factor can provide a useful back-of-the-envelope analysis, it alone can't be used as a single say--it's only a means of comparing two hypotheses. 
+
+Calculating the posterior odds is a more formula and useful test.
+
 ### Why the davy would I use Bayes Reasoning when I can use a simple Chi-Square test to see if the dice is fair?
 
 It's all about the data you have available to you.
@@ -213,3 +217,12 @@ It's all about the data you have available to you.
 A chi-square test would work well if you were only observing the outcome of the dice. But, from the example provided in the book, we also know that there's a 1 in 3 chance we will get a loaded dice.
 
 The difference lies in how much perspective we have.
+
+Bayes' theorem provides a framework for **incorporating prior knowledge** and adjusting probabilities based on new data.
+
+The chi-square test **does not involve prior beliefs** or probabilities. Instead, it compares observed frequencies to expected frequencies under the null hypothesis of no association or no difference between groups. It provides a measure of how well the observed data fit the expected distribution, allowing you to determine if the deviation is statistically significant.
+
+## Chapter 17: Bayesian Reasoning in the Twilight Zone
+
+The purpose of this chapter is to quantify *how much data* it should take to convince someone of a hypothesis.
+
