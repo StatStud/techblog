@@ -164,3 +164,52 @@ The value of Bayesian reasoning, even when you are subjectively assigning priors
 
 ## Chapter 15: From parameter estimation to hypothesis testing: building a bayesian A/B test
 
+Bayesian A/B test can work well when testing two cases.
+
+If we are checking click rates on email subscriptions, and we already have an idea, either from industry knowledge or past data, of the click rate probability, then that can serve as our prior.
+
+Then, the A/B testing can be performed to give us the likelihood. And, once we have the likelihood, we can combine the prior and likelihood to get our posterior distribution.
+
+![](/bayesian-stats6.png)
+
+But how sure can we be that version B is better than version A? That's where Monte Carlo simulations come into play.
+
+> We can imagine the posterior distribution to represent **all** the worlds that could exist **based on our current state of beliefs from the data**. 
+
+Every time we sample from each distribution we're seeing what one possible world could look like.
+
+> We can tell from from the above figure to expect more worlds where B is the truly better variant, and the more frequently we sample, the more precisely we can tell in exactly how many worlds, of all the worlds we've sampled, B is the better variant. This is fundamentally the Monte Carlo method.
+
+Once we have our samples, we can look at the **ratio** of worlds where B is the best to the total number of worlds sampled, thereby giving us an **exact probability** that B is in fact greater than A.
+
+Note: the remainder of this chapter has a great walk through of running the sampling and the beta distributions in R. **Review this chapter if you seek implementation**.
+
+## Chapter 16: Introduction to the Bayes Factor and Posterior odds: The competition of ideas
+
+Recall for formula for Bayes' theorem. The hardest part of the formula for P(H|D) is in calculate the probability of our data P(D). 
+
+P(D) is also the denominator of our formula, which means that if we are *more interested in comparing two hypothesis*, rather than computing the actual probability (which includes calculating P(D)), we can instead compute the **ratio of posteriors** formula.
+
+![](/bayesian-stats7.png)
+
+We call the result of this ratio the **posterior odds**. And, when we factor our P(H) for two hypothesis that are equally likely on their own, we get the **Bayes Factor**, which is the ratio between the likelihoods of two hypotheses.
+
+> In **Bayesian reasoning**, we're not gathering evidence to support our ideas; we're looking to see how well our ideas explain the evidence in front of us.
+
+> What the ratio is telling us is the likelihood of what we've seen given what **we believe** to be true, compared to what **someone else believes** to be true. Our hypothesis wins when it explains the world better than the comparing hypothesis.
+
+But the alternative could be true; it could be the case that the other person's hypothesis is correct, in which case we may consider changing our own beliefs. 
+
+> The key here is that in Bayesian reasoning, we don't worry about supporting our beliefs--we are focused on *how well* our beliefs support the data we observe. Data can either confirm our belief, or lead us to change our minds.
+
+![](/bayesian-stats8.png)
+
+The remainder of this chapter uses a really cool and easy to follow example of testing our with dice.
+
+### Why the davy would I use Bayes Reasoning when I can use a simple Chi-Square test to see if the dice is fair?
+
+It's all about the data you have available to you.
+
+A chi-square test would work well if you were only observing the outcome of the dice. But, from the example provided in the book, we also know that there's a 1 in 3 chance we will get a loaded dice.
+
+The difference lies in how much perspective we have.
