@@ -74,7 +74,7 @@ Where:
 - q is the probability of failure on a single trial (q = 1 - p).
 - C(n, k) represents the binomial coefficient, which is calculated as n! / (k! * (n - k)!)
 
-## The Beta Distribution
+## Chapter 5: The Beta Distribution
 
 > In real life we are almost never sure what the exact probability of any event is; instead, we just have observations and data.
 
@@ -89,3 +89,78 @@ That's exactly where the beta distribution comes in. The beta distribution gives
 > The beta distribution helps us determine the probability of a collection (distribution) of probabilities that could represent the true value of p (probability of success) in a binomial distribution
 
 > The true value of p is one that we can infer to be the **most probable** from the beta distribution
+
+# Part 2: Bayesian probability and prior probabilities
+
+## Chapter 6: Conditional probability
+
+Part 1 was all about independence events where the outcome of one trial does not influence the outcome of the next trial.
+
+As we ascend to more complex issues, we start discovering that certain events depend on others.
+
+> Bayes theorem allows us to take our belief about the world, combine them with data, and then transform this combination into **an estimate of the strength of our beliefs given the evidence we have observed**
+
+## Chapter 7: Bayes' theorem with lego
+
+A review of Bayes' theorem
+
+## Chapter 8: The prior, likelihood, and posterior of bayes theorem
+
+![](/bayesian-stats1.png)
+
+The goal of Bayes Theorem is to *quantify* how strongly we hold our beliefs given the data we've observed (the **posterior probability**, P(belief | data)).
+
+The **likelihood** is the probability of the data to exist given our belief (P(data | belief)). 
+
+Finally, the **prior probability** tells us the plain-jane probability of our data to exist by itself (P(belief))--this represents the strength in our belief before seeing any data.
+
+Since the probability of the data is in the denominator, this means that as the probability of the data increases, the probability of our posterior decreases, because as the data we observe becomes increasingly unlikely, **a typically unlikely explanation does a better job of explaining the event.**
+
+![](/bayesian-stats2.png)
+
+## Chapter 9: Bayesian Priors and working with probability distributions
+
+Prior probabilities are the most controversial aspect of Bayes' Theorem because they're frequently considered subjective.
+
+# Part 3: Parameter Estimation
+
+## Chapter 10: Introduction to Averaging and Parameter Estimation
+
+Parameter estimation is a statistical inference technique where we use our data to guess the value of an unknown variable. 
+
+Taking the average of a measurement is a good start at inference. Averaging data is useful because there's an equal probability of our estimate being higher or lower to some degree from the true value. In other words, errors in measurement tend to cancel each other out.
+
+## Chapter 11: Measuring the spread of our data
+
+In this chapter, we learn about standard variance and variance for quantifying the spread of our data.
+
+## Chapter 12: The Normal Distribution
+
+A review of the normal distribution
+
+## Chapter 13: Tools of Parameter Estimation: PDF, CDF, and Quantile
+
+Helpful in determining the confidence interval of our given estimation.
+
+## Chapter 14: Parameter Estimation with Prior Probabilities
+
+![](/bayesian-stats5.png)
+
+This is where we use out *existing beliefs* to get a parameter estimation, or how the **beta distribution changes as we gain more info**.
+
+![](/bayesian-stats3.png)
+
+The more data we gather, the more our prior beliefs become diminished by evidence. But before that, in light of new evidence, our prior beliefs squashed any data we had. A prior probability can help keep our estimate more accurate in the absence of data.
+
+![](/bayesian-stats4.png)
+
+The best priors are backed by data, and there is never really a "fair" prior when you have a total lack of data. Everyone brings to a problem their own experiences and perspectives on the world.
+
+The value of Bayesian reasoning, even when you are subjectively assigning priors, is that you are **quantifying** your subjective belief; this permits you to compare your prior with other people's and see how well it explains the world around you.
+
+> Likewise, no amount of mathematics can make up for ignorance. If you have no data and no prior understanding of the problem, **the only honest answer** is to say that you can't conclude anything until you know more.
+
+# Part 4: Hypothesis Testing: The heart of statistics
+
+## Chapter 15: From parameter estimation to hypothesis testing: building a bayesian A/B test
+
