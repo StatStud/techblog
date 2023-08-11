@@ -5,7 +5,7 @@ draft: false
 tags: []
 ShowToc: true
 cover:
-    image: placeholder.png
+    image: hugo.png
     alt: ""
     caption: ""
 ShowCodeCopyButtons: true
