@@ -2,7 +2,7 @@
 title: "Hugo Static Site Generator"
 date: 2023-08-11T13:52:18-04:00
 draft: false
-tags: []
+tags: ['webdev']
 ShowToc: true
 cover:
     image: hugo.png
