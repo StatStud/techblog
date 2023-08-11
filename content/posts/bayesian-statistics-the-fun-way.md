@@ -226,3 +226,7 @@ The chi-square test **does not involve prior beliefs** or probabilities. Instead
 
 The purpose of this chapter is to quantify *how much data* it should take to convince someone of a hypothesis.
 
+## Chapter 18: When data does not convince you
+
+## Chapter 19: From hypothesis testing to parameter estimation
+
