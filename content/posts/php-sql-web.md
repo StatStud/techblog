@@ -16,6 +16,10 @@ Today I learned the following:
 2. Create demo data for SQL table
 3. Create PHP code to connect to database
 4. Create HTML file to take user input and retrieve data from database
+5. Create a subdomain for a single host plan
+6. Add a git repo to that subdomain
+7. ssh into my host plan, and use git to push updates
+
 
 The PHP code is quite simple:
 ```php
