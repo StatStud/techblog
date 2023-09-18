@@ -19,9 +19,10 @@ from transformers import RobertaTokenizer
 import torch
 import pandas as pd
 
-model = AutoModelForSequenceClassification.from_pretrained("bert-base-uncased")
+model = AutoModelForSequenceClassification.from_pretrained("bert-base-uncased").to('cuda')
 tokenizer = RobertaTokenizer.from_pretrained('bert-base-uncased')
 ```
+**NOTE**: Adding ".to('cuda')" to the model instance is *vital* if you wish to speed up inference time (trust me, you want to do this)
 
 Next, create the actual function to run inference:
 
@@ -29,7 +30,7 @@ Next, create the actual function to run inference:
 def classify_text(text):
 
     # Tokenize the input text
-    inputs = tokenizer(text, return_tensors='pt')
+    inputs = tokenizer(text, return_tensors='pt').to('cuda')
 
     # Pass the input through the model to get logits
     logits = model(**inputs).logits
@@ -45,6 +46,7 @@ def classify_text(text):
 text = "This is an example sentence for classification"
 classify_text(text)
 ```
+**NOTE**: Again, add the tokenizer to the GPU via ".to('cuda')". This is important for speed.
 
 And that's it! Now if you wish to apply it to your pandas dataset, 
 all you need to run is something like this:
