@@ -19,6 +19,7 @@ Today I learned the following:
 5. Create a subdomain for a single host plan
 6. Add a git repo to that subdomain
 7. ssh into my host plan, and use git to push updates
+8. Writing SQL-Injection Resistant PHP Code
 
 # Setting up PHP for basic database query
 The PHP code is quite simple:
@@ -135,3 +136,13 @@ ssh host_gator_username@website.com
 
 After typing this, you will be prompted with a password entry; go ahead and enter your hostgator plan password that you'd normally use to login.
 
+
+# Writing SQL-Injection Resistant PHP Code
+
+Here are the elements of SQL-Injection Resistant PHP Code:
+1. Prepared statements
+2. whitelisting
+3. typecasting
+4. escaping
+
+Credit to [Vickie Li Dev's video](https://www.youtube.com/watch?v=WONbg6ZjiXk) for such an amazing recap of the above concepts.
