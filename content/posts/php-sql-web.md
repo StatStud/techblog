@@ -20,7 +20,7 @@ Today I learned the following:
 6. Add a git repo to that subdomain
 7. ssh into my host plan, and use git to push updates
 
-
+# Setting up PHP for basic database query
 The PHP code is quite simple:
 ```php
 <?php
@@ -89,3 +89,49 @@ Putting these two together, the result was super easy!
 The user can input a range of values for the price, and get the correct food items that match his or her budget.
 
 I now have confidence to build a web app that can query from a database.
+
+# Creating a subdomain for a single host plan
+
+Why do we want to create a subdomain for a single host plan? 
+
+Three reasons:
+1. costs
+2. organization
+3. git
+
+Cost-wise, rather than paying for x-number of hosting plans for x-number of different web-dev ideas, you can instead host (theoretically) an unlimited number of subdomains all using the same host plan. I say theoretically because there's of course a disk and memory limit to your hosting plan, but nevertheless the ideas are limitless!
+
+Organization-wise, creating a subdomain on hostgator gives you a dedicated folder within your existing folder structure for your new site; you would not want to mix one website content (html, css, and php files, plus static elements) with a another, so having the separation really helps.
+
+Finally, from a git-repo standpoint, having a dedicated folder for your subdomain makes it easier to git push and save your changes for one specific web idea. Each subdomian can have its own dedicated git-repo.
+
+# Creating a database on hostgator via PHPMyAdmin
+
+To create a new database (which will contain new data tables), checkout [this video](https://www.youtube.com/watch?v=4bnmnUsb7IU&t=240s).
+
+To create the database tables for a specific database, you can import from an existing database or manually create demo data. You can also ingest from a csv. The options are yours
+
+# Adding a git repo to a subdomain
+
+Hostgator has recently changed their approach to this and now it's much easier than before!
+
+1. Launch CPanel
+2. Under "Files" section, click on "Git Version Control"
+3. Click "Create"
+4. Under "Clone URL", paste the github url to the repo
+5. Click on "Create"
+
+And that's it!
+
+Alternatively, and this is my preference, you can "git clone" from the command line by ssh-ing into your website.
+
+# SSH-ing into website
+
+```sh
+ssh host_gator_username@website.com
+```
+
+**NOTE:** This is assuming you've already added your rsa_id key to hostgator. Make sure you do that.
+
+After typing this, you will be prompted with a password entry; go ahead and enter your hostgator plan password that you'd normally use to login.
+
