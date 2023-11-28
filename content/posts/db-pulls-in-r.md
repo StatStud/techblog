@@ -41,3 +41,9 @@ for (year in 1950:2020){
 }
 
 ```
+
+To run your R script from the command line, simply run:
+
+```sh
+R CMD BATCH script.R
+```
