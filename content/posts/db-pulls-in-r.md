@@ -20,7 +20,7 @@ install.packages("RODBC")
 library(data.table)
 library(RODBC)
 
-cxn <- odbcsDriverConnect('Driver={ODBC DRIVER 13 for SQL Server};Server=website.com;Trusted_Connection=yes')
+cxn <- odbcDriverConnect('Driver={ODBC DRIVER 13 for SQL Server};Server=website.com;Trusted_Connection=yes')
 
 file_base = "base/dir/folder/for/data"
 table_name <- "schema.table_a"
