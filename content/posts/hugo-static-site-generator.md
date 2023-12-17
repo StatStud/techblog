@@ -18,7 +18,13 @@ This is where I pull put down what I learn as I become better at Hugo Static Sit
 # Zero to Hero: Create a fully-functional site in 12 steps
 
 ## Step 0
-Brew install hugo if you have not already done so
+Brew install hugo if you have not already done so.
+
+ALSO, if you run into any issues when running "hugo server", or issues when deploying from any web host, consider upgrading your hugo with the following:
+
+```sh
+brew upgrade hugo
+```
 
 ## Step 1
 Create a new project with the following command:
@@ -184,7 +190,19 @@ within that .gitmodules file, type and save the following:
 ```
 
 
+## Step 9
 
+If you have brew installed gh, then run the following:
+
+```sh
+gh repo create <project_name> --public
+```
+
+Obviously, you can use --private flag as well.
+
+If you don't have gh brew installed, then simply run the same process above, but from github. If you create the repo first on github, then you can follow the instructions that show from the empty folder with how to push to repo.
+
+Side note: the brew install process is actually pretty painless, so it's worth doing it now.
 
 
 # Misc
