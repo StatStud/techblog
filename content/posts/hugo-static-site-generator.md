@@ -161,10 +161,37 @@ weight: 999
 ---
 ```
 
-### Additional resources
-- https://www.youtube.com/watch?v=hjD9jTi_DQ4
+## Step 8
+
+Initialize git repo by running the following command from the top-level of the project folder:
+
+```sh
+git init
+```
+
+Followed by:
+
+```sh
+touch .gitmodules
+```
+
+within that .gitmodules file, type and save the following:
+
+```txt
+[submodule "themes/PaperMod"]
+    path = themes/PaperMod
+    url = "https://github.com/adityatelange/hugo-PaperMod.git"
+```
+
+
+
+
 
 # Misc
+
+## Additional resources
+- https://www.youtube.com/watch?v=hjD9jTi_DQ4
+
 ## Archetypes Folder
 
 This is where you will create the template writing structure for your posts (e.g. the type of front matter for default values, the headings of each posts, etc).
