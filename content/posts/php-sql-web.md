@@ -128,6 +128,8 @@ Alternatively, and this is my preference, you can "git clone" from the command l
 
 NOTE: You get to do a "git pull" anytime you update your repo, otherwise your website will not render the changes.
 
+Double NOTE: Once you push your changes to the repo **AND** do a git pull on the remote server, you should see the changes **INSTANTLY** on the website. Otherwise, you probably forgot to do a git pull from the server side :) (or there's a bug in your code).
+
 # SSH-ing into website
 
 ```sh
@@ -148,3 +150,4 @@ Here are the elements of SQL-Injection Resistant PHP Code:
 4. escaping
 
 Credit to [Vickie Li Dev's video](https://www.youtube.com/watch?v=WONbg6ZjiXk) for such an amazing recap of the above concepts.
+
