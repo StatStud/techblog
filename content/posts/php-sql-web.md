@@ -126,6 +126,8 @@ And that's it!
 
 Alternatively, and this is my preference, you can "git clone" from the command line by ssh-ing into your website.
 
+Now, any changes made to your repo will *automatically* be reflected in your website. No additional updates needed.
+
 # SSH-ing into website
 
 ```sh
