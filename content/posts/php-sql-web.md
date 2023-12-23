@@ -130,6 +130,8 @@ NOTE: You get to do a "git pull" anytime you update your repo, otherwise your we
 
 Double NOTE: Once you push your changes to the repo **AND** do a git pull on the remote server, you should see the changes **INSTANTLY** on the website. Otherwise, you probably forgot to do a git pull from the server side :) (or there's a bug in your code).
 
+Triple NOTE: Github updated their security on pushing updates that does not permit password authentication; you instead use a personal access token to authenticate (if using https). See [this video](https://www.youtube.com/watch?v=kHkQnuYzwoo) on where to get tokens (hint: it's under developer settings in github).
+
 # SSH-ing into website
 
 ```sh
