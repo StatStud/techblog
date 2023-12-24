@@ -132,6 +132,17 @@ Double NOTE: Once you push your changes to the repo **AND** do a git pull on the
 
 Triple NOTE: Github updated their security on pushing updates that does not permit password authentication; you instead use a personal access token to authenticate (if using https). See [this video](https://www.youtube.com/watch?v=kHkQnuYzwoo) on where to get tokens (hint: it's under developer settings in github).
 
+
+Quadruple NOTE: For automatic git pulls (meaning, you push a change to the repo, and you want your server to automatically git pull that change in), use two things (1) webhooks (2) php script like the one below:
+
+```php
+<?php shell_exec('git pull'); ?>
+```
+
+Update the webhook to point to the endpoint that has this php script (so it would look something like "http://www.website.com/pull.php").
+
+For more details, see [this blog post](https://medium.com/@tecfare/how-to-automate-your-pull-from-git-repo-to-cpanel-web-hosting-7c45ab1a8cc2).
+
 # SSH-ing into website
 
 ```sh
