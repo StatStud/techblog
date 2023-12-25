@@ -20,6 +20,7 @@ Today I learned the following:
 6. Add a git repo to that subdomain
 7. ssh into my host plan, and use git to push updates
 8. Writing SQL-Injection Resistant PHP Code
+9. Using a non 'index.html' file as the default web page
 
 # Setting up PHP for basic database query
 The PHP code is quite simple:
@@ -164,3 +165,13 @@ Here are the elements of SQL-Injection Resistant PHP Code:
 
 Credit to [Vickie Li Dev's video](https://www.youtube.com/watch?v=WONbg6ZjiXk) for such an amazing recap of the above concepts.
 
+# Using a non 'index.html' file as the default web page
+
+This is a simple fix on hostgator.
+
+On the project folder for your website, look for the .htaccess file and change it to the following format:
+```txt
+DirectoryIndex index.php
+```
+
+With this update, "index.php" is now the main file.
