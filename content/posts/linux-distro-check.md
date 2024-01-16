@@ -33,7 +33,7 @@ In other words, it's highly *likely* that we are running macOS on our system.
 
 ## Side Note
 
-In addition to checking the distribution, you can also run the following to get the type of archeceture:
+In addition to checking the distribution, you can also run the following to get the type of architecture:
 
 ```sh
 uname -m
@@ -48,6 +48,8 @@ x86_64
 Knowing this will be helpful when downloading certain software.
 
 # Method 2
+
+Use this command to check which system you're using (e.g.  CentOS, RHEL, Debian, or Ubuntu)
 
 ```sh
 cat /etc/*-release
