@@ -88,3 +88,65 @@ CentOS Linux release 7.8.2003 (Core)
 ```
 
 From this example, it is more clear to see that we are using CentOS (release 7.8.2003).
+
+# Bonus: Hardware check.
+
+To view the hardware specs of your device run "lscpu". To specifically get the number of cpu-cores of your machine, run "nproc".
+
+lscpu will output something that looks like this:
+```sh
+Architecture:          x86_64
+CPU op-mode(s):        32-bit, 64-bit
+Byte Order:            Little Endian
+CPU(s):                48
+On-line CPU(s) list:   0-47
+Thread(s) per core:    1
+Core(s) per socket:    24
+Socket(s):             2
+NUMA node(s):          8
+Vendor ID:             AuthenticAMD
+CPU family:            25
+Model:                 1
+Model name:            AMD EPYC 7413 24-Core Processor
+Stepping:              1
+CPU MHz:               2650.000
+CPU max MHz:           2650.0000
+CPU min MHz:           1500.0000
+BogoMIPS:              5290.52
+Virtualization:        AMD-V
+L1d cache:             32K
+L1i cache:             32K
+L2 cache:              512K
+L3 cache:              32768K
+NUMA node0 CPU(s):     0-5
+NUMA node1 CPU(s):     6-11
+NUMA node2 CPU(s):     12-17
+NUMA node3 CPU(s):     18-23
+NUMA node4 CPU(s):     24-29
+NUMA node5 CPU(s):     30-35
+NUMA node6 CPU(s):     36-41
+NUMA node7 CPU(s):     42-47
+```
+
+This specific device has 48 cpu cores.
+
+To get GPU count, run "lspci | grep -i nvidia" (this searches for nvidea specific GPUs). The output will look like this:
+
+```sh
+07:00.0 3D controller: NVIDIA Corporation Device 20b2 (rev a1)
+0a:00.0 3D controller: NVIDIA Corporation Device 20b2 (rev a1)
+45:00.0 3D controller: NVIDIA Corporation Device 20b2 (rev a1)
+4b:00.0 3D controller: NVIDIA Corporation Device 20b2 (rev a1)
+83:00.0 3D controller: NVIDIA Corporation Device 20b2 (rev a1)
+89:00.0 3D controller: NVIDIA Corporation Device 20b2 (rev a1)
+bf:00.0 3D controller: NVIDIA Corporation Device 20b2 (rev a1)
+c2:00.0 3D controller: NVIDIA Corporation Device 20b2 (rev a1)
+d1:00.0 Bridge: NVIDIA Corporation Device 1af1 (rev a1)
+d2:00.0 Bridge: NVIDIA Corporation Device 1af1 (rev a1)
+d3:00.0 Bridge: NVIDIA Corporation Device 1af1 (rev a1)
+d4:00.0 Bridge: NVIDIA Corporation Device 1af1 (rev a1)
+d5:00.0 Bridge: NVIDIA Corporation Device 1af1 (rev a1)
+d6:00.0 Bridge: NVIDIA Corporation Device 1af1 (rev a1)
+```
+
+This specific machine has 8 GPUs available (3D controller).
