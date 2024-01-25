@@ -56,7 +56,35 @@ srun -N 1 -p partition_name -t 02:00:00 --pty bash
 
 - **pty bash**: This part of the command requests a pseudo-terminal (pty) and launches the "bash" shell. The "--pty" option is used to indicate that the job requires a pseudo-terminal for interactive use, and "bash" is the shell that will be started.
 
+# The sbatch command
 
+classic command to run with a batch script
+
+```sh
+sbach script.sh
+```
+
+where the script looks something like this:
+
+```sh
+#!/bin/bash
+#SBATCH -p gpu
+#SBATCH -t 24:00:00
+
+cd /main/working/dir
+
+module load modules/anaconda3/4.3.1
+
+conda activate env
+
+export data_path="/some/data/path"
+
+export HUGGINGFACE_HUB_CACHE=$data_path
+export PIP_CACH_DIR=$data_path
+export TRANSFORMERS_CACHE=$data_path
+
+python script.py
+```
 
 # Accessing Resources
 
