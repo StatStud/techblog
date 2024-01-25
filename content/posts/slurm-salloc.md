@@ -38,6 +38,26 @@ Let's break down each of these options in more detail:
 
 Once we run the salloc command, we will see an output similar to the following:
 
+# The srun command
+
+Another command similar to salloc is srun:
+
+```sh
+srun -N 1 -p partition_name -t 02:00:00 --pty bash
+```
+
+- **srun**: This is the command used to submit parallel jobs for execution.
+
+- **N 1**: This option specifies the number of nodes to be allocated for the job. In this case, it's requesting 1 node.
+
+- **p**: The "-p" option is used to specify the partition or queue to which the job should be submitted. In this case, the partition is specified as "partition_name."
+
+- **t**: The "-t" option specifies the maximum time (in HH:MM:SS format) the job is allowed to run. In this case, it's set to 2 hours.
+
+- **pty bash**: This part of the command requests a pseudo-terminal (pty) and launches the "bash" shell. The "--pty" option is used to indicate that the job requires a pseudo-terminal for interactive use, and "bash" is the shell that will be started.
+
+
+
 # Accessing Resources
 
 ```sh
