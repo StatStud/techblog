@@ -120,3 +120,11 @@ JOBID     PARTITION     NAME         USER        ST   TIME_LEFT  NODES
 123457    gpu           job2         johndoe     PD   00:05:00   2
 123458    cpu           job3         johndoe     R    00:45:00   1
 ```
+
+# Viewing available computes
+
+just type:
+
+```sh
+sinfo
+```
