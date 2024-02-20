@@ -11,5 +11,13 @@ cover:
 ShowCodeCopyButtons: true
 ---
 
+## How to get the bottom of the page
 To get to the bottom of a page in nano, type: "ctrl + W" and then "ctrl + V".
 
+## How to select text (to copy/delete)
+
+- press "cntrl + 6"
+- you will see "mark set"
+- select the text
+- copy, delete, or do whatever
+- then, press "cntrl + 6" and you will see "mark unset"; this stops the highlighting mode.
