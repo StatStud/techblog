@@ -21,6 +21,7 @@ Today I learned the following:
 7. ssh into my host plan, and use git to push updates
 8. Writing SQL-Injection Resistant PHP Code
 9. Using a non 'index.html' file as the default web page
+10. Run python using PHP
 
 # Setting up PHP for basic database query
 The PHP code is quite simple:
@@ -175,3 +176,75 @@ DirectoryIndex index.php
 ```
 
 With this update, "index.php" is now the main file.
+
+# Run python using PHP
+This is simple; you'll need two/three things:
+1. html code
+2. php code (could be combined with 1)
+3. python script
+
+Here is a simple example that uses all three, instead of combining:
+
+html:
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Square Calculator</title>
+</head>
+<body>
+    <h1>Square Calculator</h1>
+    <form action="calculate_square.php" method="post">
+        <label for="number">Enter a number:</label>
+        <input type="number" id="number" name="number" required>
+        <input type="submit" value="Calculate">
+    </form>
+</body>
+</html>
+```
+
+The important part of the above is the snippet of code:
+```html
+<form action="calculate_square.php" method="post">
+```
+
+Next, we have our php script:
+
+```php
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Get the number from the form
+    $number = $_POST["number"];
+    
+    // Execute the Python script to calculate the square
+    $output = shell_exec("python square.py $number");
+
+    // Print the result
+    echo "<h2>The square of $number is $output</h2>";
+}
+?>
+```
+
+The important snippet in this code is here:
+
+```php
+$output = shell_exec("python square.py $number");
+```
+
+Finally, here is our python script:
+
+```python
+import sys
+
+def square(num):
+    return num * num
+
+if __name__ == "__main__":
+    num = int(sys.argv[1])
+    result = square(num)
+    print(result)
+```
+
+And that's it! If you run these three scripts together, it will work as intended!
