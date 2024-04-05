@@ -248,3 +248,66 @@ if __name__ == "__main__":
 ```
 
 And that's it! If you run these three scripts together, it will work as intended!
+
+## Bonus
+
+Take it a step further. The previous attempt would *redirect* us to a different page. Here's how we would go about it, by showing results on the same page.
+
+The main difference is that we use AJAX over post method (if ($_SERVER["REQUEST_METHOD"] == "POST"))
+
+Here would be your html script:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Square Calculator</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <h1>Square Calculator</h1>
+    <a href="index.php">return home</a>
+    <br>
+    <label for="num">Enter a number:</label>
+    <input type="number" id="num" name="num">
+    <button onclick="calculateSquare()">Calculate</button>
+    <div id="result"></div>
+    <script>
+        function calculateSquare() {
+            var num = document.getElementById("num").value;
+            $("#result").text("Calculating..."); // Print message indicating calculation is in progress
+            $.ajax({
+                type: "GET",
+                url: "calculate_square.php",
+                data: { num: num },
+                dataType: "json",
+                success: function(response) {
+                    $("#result").text("The square of " + num + " is " + response.result);
+                }
+            });
+        }
+    </script>
+</body>
+</html>
+
+```
+
+And here is your php:
+
+```php
+<?php
+// run_python_script.php
+$num = $_GET['num']; // Get input number from AJAX request
+$command = "python square.py $num";
+$output = shell_exec($command);
+echo json_encode(array('result' => $output));
+?>
+```
+
+One of the main differences is in the php code; we are **not** using the following snippet at the top (or anywhere, for that matter):
+
+```php
+if ($_SERVER["REQUEST_METHOD"] == "POST")
+```
