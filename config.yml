@@ -19,6 +19,9 @@ markup:
       unsafe: true
 
 params:
+  math: true
+
+params:
   homeInfoParams:
     Title: "Welcome to the Book Club"
     Content: This will be the first of many sites where I will practice blogging. Thanks for stopping by!
@@ -29,8 +32,6 @@ params:
   showReadingTime: true
 
   showShareButtons: true
-
-  math: true
 
 
 outputs:
