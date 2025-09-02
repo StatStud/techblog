@@ -13,19 +13,21 @@ ShowCodeCopyButtons: true
 
 # How does Causal Analysis compare with OLS methods?
 
-$$\begin{align}
+$$\begin{aligned}
 2x + 3y - z &= 1 \\
 x - 2y + 4z &= 5 \\
 3x + y + 2z &= 8
-\end{align}$$
+\end{aligned}$$
 
 # When do we use causal analysis?
 
-$$\begin{cases}
-2x + 3y - z = 1 \\
-x - 2y + 4z = 5 \\
-3x + y + 2z = 8
-\end{cases}$$
+$$\left\{
+\begin{aligned}
+2x + 3y - z &= 1 \\
+x - 2y + 4z &= 5 \\
+3x + y + 2z &= 8
+\end{aligned}
+\right.$$
 
 # Misc
 
