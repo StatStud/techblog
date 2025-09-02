@@ -6,6 +6,12 @@
           delimiters: [
             {left: '$$', right: '$$', display: true},
             {left: '$', right: '$', display: false}
-          ]
+          ],
+          macros: {
+            '\\cases': '\\begin{cases}#1\\end{cases}',
+            '\\align': '\\begin{align}#1\\end{align}'
+          },
+          trust: true,
+          strict: false
         });"></script>
 {{- end }}
