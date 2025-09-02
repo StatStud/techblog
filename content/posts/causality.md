@@ -11,49 +11,39 @@ cover:
 ShowCodeCopyButtons: true
 ---
 
-# How does Causal Analysis compare with OLS methods?
+# When do we use causal analysis?
+The gold standard for establishing causal relationships is a controlled experiment.
+But, sometimes these experiments are not feasible for two primary reasons:
+- The experiment itself is unethical (e.g. giving people cigarettes to see if it causes cancer)
+- The experiment is expensive or logistically impossible (e.g. studying the long-term effects of economic policies across entire countries)
+
+When these become the case, we try to establish causality from observational data.
+
+# Why can't we use OLS methods?
+
+While OLS regression is excellent for prediction and identifying correlations, it faces fundamental challenges when we want to make causal claims. The core issue is confounding variables, or factors that influence both our treatment variable and our outcome variable, creating spurious relationships.
+OLS assumes that once we control for the variables in our model, the remaining variation in our treatment variable is "as good as random." But this assumption often fails in practice because:
+
+- Omitted variable bias: We can never be sure we've included all relevant confounders in our model
+- Simultaneity: Variables might influence each other bidirectionally
+- Selection bias: The treatment group might be systematically different from the control group in unobservable ways
+
+OLS tells us about correlations and can make good predictions, but it cannot distinguish between correlation and causation. Causal analysis methods are specifically designed to address these confounding issues and help us isolate the true causal effects.
+
+## Example: Estimating Mile Time
+
+Imagine we are building a linear regression model to predict how fast someone can run a mile.
+We collect data on variables such as BMI, VO2-max, income, and body fat. And let's say this model performs reasonably well, and all variables except for income are significant predictors for mile time. We end up with an equation that looks like this:
 
 $$\begin{aligned}
-2x + 3y - z &= 1 \\
-x - 2y + 4z &= 5 \\
-3x + y + 2z &= 8
+\text{Mile Time} &= 12.5 + 0.18 \cdot \text{BMI} - 0.12 \cdot \text{VO}_2\text{max} + 0.08 \cdot \text{Body Fat}
 \end{aligned}$$
 
-# When do we use causal analysis?
+The issue then comes down to interpretation. Looking at BMI, we are saying "Each 1-unit increase in BMI adds ~0.18 minutes to our mile time...**holding all other variables constant**".
 
-$$\left\{
-\begin{aligned}
-2x + 3y - z &= 1 \\
-x - 2y + 4z &= 5 \\
-3x + y + 2z &= 8
-\end{aligned}
-\right.$$
+Hopefully you see the issue now, because how can we expect to increase BMI, without any change to body fat percentage? If the added weight comes from muscle, then our body fat percentage (of our total weight) is lower, but if that weight gain comes from fat, then our body fat percentage increases.
 
-# Misc
+Hence, we see that BMI and body fat percentage are fundamentally linked; they're not independent variables that can be adjusted separately in the real world. The OLS assumption of "holding all other variables constant" breaks down because these variables are mechanically related to each other. This illustrates why causal analysis requires us to think carefully about the underlying data-generating process, rather than the statistical relationships we observe in our sample.
 
-The Greek alphabet in mathematics:
 
-$$\alpha + \beta = \gamma$$
 
-$$\Delta = b^2 - 4ac$$
-
-$$\int_0^{2\pi} \sin(\theta) \, d\theta = 0$$
-
-$$\sum_{i=1}^n \lambda_i \mu_i = \phi(\Omega)$$
-
-# more
-
-Probability density function:
-$$f(x) = \frac{1}{\sigma\sqrt{2\pi}} e^{-\frac{(x-\mu)^2}{2\sigma^2}}$$
-
-Expected value:
-$$E[X] = \int_{-\infty}^{\infty} x \cdot f(x) \, dx$$
-
-Conditional probability:
-$$P(A|B) = \frac{P(A \cap B)}{P(B)}$$
-
-Bayes' theorem:
-$$P(H|E) = \frac{P(E|H) \cdot P(H)}{P(E)}$$
-
-# again
-Here's some inline math: The probability $P(X > 5) = \int_5^{\infty} f(x) dx$ where $f(x)$ is the probability density function, and the mean is $\mu = E[X]$.
