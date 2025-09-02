@@ -100,11 +100,11 @@ Let's formalize our education-income relationship with concrete equations. In th
 **True Structural Equations:**
 
 
-$$U_1, U_2, U_3, U_4 &\sim \text{Some joint distribution (unobserved factors)} $$
-$$\text{Family Background} &= U_1 $$
-$$\text{Ability} &= U_2 $$
-$$\text{Education} &= \beta_0 + \beta_1 \cdot \text{Family Background} + \beta_2 \cdot \text{Ability} + U_3 $$
-$$\text{Income} &= \alpha_0 + \alpha_1 \cdot \text{Education} + \alpha_2 \cdot \text{Family Background} + \alpha_3 \cdot \text{Ability} + U_4$$
+$$U_1, U_2, U_3, U_4 \sim \text{Some joint distribution (unobserved factors)} $$
+$$\text{Family Background} = U_1 $$
+$$\text{Ability} = U_2 $$
+$$\text{Education} = \beta_0 + \beta_1 \cdot \text{Family Background} + \beta_2 \cdot \text{Ability} + U_3 $$
+$$\text{Income} = \alpha_0 + \alpha_1 \cdot \text{Education} + \alpha_2 \cdot \text{Family Background} + \alpha_3 \cdot \text{Ability} + U_4$$
 
 
 Here, $\beta_0, \beta_1, \beta_2, \alpha_0, \alpha_1, \alpha_2, \alpha_3$ represent the **true causal parameters** that govern how variables influence each other in the real world. These are the latent "ground truth" values we're trying to uncover.
