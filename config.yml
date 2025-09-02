@@ -20,35 +20,27 @@ markup:
 
 params:
   math: true
-
-params:
   homeInfoParams:
     Title: "Welcome to the Book Club"
     Content: This will be the first of many sites where I will practice blogging. Thanks for stopping by!
-
   cover:
     linkFullImages: true
-  
   showReadingTime: true
-
   showShareButtons: true
-
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
 
 outputs:
-    home:
-        - HTML
-        - RSS
-        - JSON # is necessary
-
-params:
-    fuseOpts:
-        isCaseSensitive: false
-        shouldSort: true
-        location: 0
-        distance: 1000
-        threshold: 0.4
-        minMatchCharLength: 0
-        keys: ["title", "permalink", "summary", "content"]
+  home:
+    - HTML
+    - RSS
+    - JSON
 
 menu:
   main:
